@@ -1,0 +1,818 @@
+.heading-primary {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 42px 0 30px;
+
+    @include mq("tablet") {
+        flex-direction: row;
+        padding: 100px 0 60px 15px;
+    }
+
+    &-en {
+        font-size: 4rem;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        font-family: $font-secondary;
+        position: relative;
+
+        @include mq("tablet") {
+            line-height: 1.2;
+            font-size: 6rem;
+            line-height: 0.7;
+            margin-right: 16px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 44px;
+            background-color: #b19d7f;
+            left: 50%;
+            transform: translateX(-50%) skewY(-30deg);
+            top: -45px;
+            rotate: 30deg;
+
+            @include mq("tablet") {
+                transform: translateX(-50%);
+                left: -25px;
+                top: -12px;
+                height: 60px;
+            }
+        }
+    }
+
+    &-jp {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.intro-heading {
+    background-color: #fafafa;
+    padding: 30px 0 33px;
+
+    @include mq("tablet") {
+        padding: 73px 0 39px;
+    }
+}
+
+
+
+// HEADING SECONDARY
+
+.heading-secondary {
+    font-size: 4.2rem;
+    letter-spacing: 0.02em;
+    font-family: $font-secondary;
+    color: $color-primary;
+    text-align: center;
+
+    @include mq("tablet") {
+        font-size: 6.4rem;
+    }
+
+    &-sm {
+        display: block;
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+        line-height: 1.2;
+        color: $color-black;
+        font-family: $font-primary;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// HEADING-TERTIARY
+
+.heading-tertiary-box {
+    background-color: #b19d7f;
+
+    &.-bgblack {
+        background-color: $color-black;
+
+        & .heading-tertiary {
+            color: $color-primary;
+
+            &::before {
+                background-image: url("../../images_new/common/icon-flower.svg");
+            }
+        }
+    }
+}
+
+.heading-tertiary {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+    font-family: $font-mincho;
+    color: $color-primary;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq("tablet") {
+        font-size: 4rem;
+        padding: 100px 0 110px;
+    }
+
+    &:before {
+        // position: absolute;
+        display: inline-block;
+        content: "";
+        width: 16px;
+        height: 20px;
+        background-image: url(./../../images_new/common/icon-flower-white.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-bottom: 8px;
+
+        @include mq("tablet") {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.breadcrumb {
+    &-ul {
+        display: flex;
+        align-items: center;
+        padding: 11px 0;
+    }
+
+    &-li {
+        display: flex;
+        align-items: center;
+    }
+
+    &-link {
+        font-size: 1rem;
+        line-height: 1.25;
+        color: #333;
+        text-decoration: none;
+        margin-right: 16px;
+        color: #939393;
+        text-decoration: underline;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+
+        @include mq("tablet") {
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+
+        &:hover {
+            // opacity: 0.7;
+            text-decoration: none;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 6px;
+            background-image: url(./../../images_new/common/arw-right.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: -10px;
+            top: 56%;
+            transform: translateY(-50%);
+
+            @include mq("tablet") {
+                width: 6px;
+                height: 9px;
+                right: -13px;
+            }
+        }
+
+        &.-active {
+            pointer-events: none;
+            color: #333;
+            text-decoration: none;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &.-home {
+            color: #939393;
+            padding-left: 15px;
+            text-decoration: underline;
+            position: relative;
+            font-size: 0;
+
+            @include mq("tablet") {
+                font-size: 1.2rem;
+                padding-left: 23px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 12px;
+                background-image: url(./../../images_new/common/home.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @include mq("tablet") {
+                    height: 13px;
+                }
+            }
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.heading-point {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    background-color: #ede8e4;
+
+    @include mq("tablet") {
+        background-color: transparent;
+    }
+
+    &-en {
+        font-size: 2.1rem;
+        line-height: 2.3;
+        letter-spacing: 0.02em;
+        font-family: $font-secondary;
+        // position: relative;
+
+        @include mq("tablet") {
+            // line-height: 1.2;
+            font-size: 3.2rem;
+            line-height: 0.7;
+            margin-right: 16px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 44px;
+                background-color: #b19d7f;
+                left: 50%;
+                transform: translateX(-50%) skewY(-30deg);
+                top: -45px;
+                rotate: 30deg;
+
+                @include mq("tablet") {
+                    transform: translateX(-50%);
+                    left: -45px;
+                    top: 43%;
+                    transform: translateY(-50%);
+                    height: 84px;
+                }
+            }
+        }
+    }
+
+    &-no {
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 1.35;
+        letter-spacing: 0.05em;
+        font-family: $font-secondary;
+        margin-left: 8px;
+
+        @include mq("tablet") {
+            font-size: 7rem;
+            line-height: 1.6;
+            margin-left: 0;
+        }
+    }
+}
+
+// women job info
+.women {
+    &__heading {
+        overflow: hidden;
+    }
+
+    &__container {
+        max-width: 1280px;
+        margin: 0 auto;
+
+        // &::before {
+        //     content          : "";
+        //     background-image : url("/images_new/women/job-info/women-mv02-sp.png");
+        //     width            : 100%;
+        //     max-width        : 183px;
+        //     height           : 268px;
+        //     position         : absolute;
+        //     bottom           : -39%;
+        //     left             : -66px;
+        //     background-repeat: no-repeat;
+        //     background-size  : cover;
+
+        //     @include mq("phablet") {
+        //         left: -66px;
+        //     }
+
+        //     @include mq("tablet") {
+        //         background-image: url("/images_new/women/job-info/women-mv02-pc.png");
+        //         max-width       : 371px;
+        //         height          : 420px;
+        //         bottom          : -20%;
+        //     }
+        // }
+
+        @include mq("tablet") {
+            position: relative;
+        }
+    }
+
+    &__heading {
+        background-image: url("../../images_new/women/job-info/women-mv-sp.jpg");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 60px 0;
+
+        // animation-name: zoomInImage;
+        // animation-duration: 5s;
+        // animation-timing-function: cubic-bezier(0, 0.54, 0, 1);
+        // animation-fill-mode: forwards;
+        // opacity: 1;
+        // transition: all 0.6s cubic-bezier(0, 0.54, 0, 1);
+        @include mq("tablet") {
+            background-image: url("../../images_new/women/job-info/women-mv-pc.jpg");
+        }
+
+        &-wrapper {
+            background-image: url("../../images_new/women/job-info/women-heading-sp.svg");
+            width: 100%;
+            max-width: 305px;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 81px 0 63px;
+            margin: 0 auto;
+            aspect-ratio: 400/430;
+            position: relative;
+
+            @include mq("tablet") {
+                position: static;
+                background-image: url("../../images_new/women/job-info/women-heading-pc.svg");
+                max-width: 820px;
+                height: 300px;
+                padding: 75px 0 45px;
+                aspect-ratio: 820/300;
+            }
+
+            &::before {
+                content: "";
+                background-image: url("../../images_new/women/job-info/women-mv02-sp.png");
+                width: 100%;
+                max-width: 180px;
+                height: 219px;
+                position: absolute;
+                bottom: -19%;
+                left: -65px;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                @include mq("tablet") {
+                    background-image: url("../../images_new/women/job-info/women-mv02-pc.png");
+                    max-width: 371px;
+                    left: 0;
+                    height: 420px;
+                    bottom: -20%;
+                }
+            }
+        }
+
+        &-ttl {
+            font-family: $font-primary;
+            font-size: 2.6rem;
+            line-height: calc(37 / 26);
+            letter-spacing: 0.03em;
+            font-weight: 600;
+            color: $color-org;
+            text-align: center;
+            margin-bottom: 21px;
+
+            @include mq("tablet") {
+                font-size: 4rem;
+                line-height: calc(62 / 40);
+                letter-spacing: 0.15em;
+                font-weight: 600;
+                color: $color-org;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+        }
+
+        &-subttl {
+            font-family: $font-mincho;
+            font-size: 1.6rem;
+            line-height: calc(26 / 16);
+            color: $color-black;
+            text-align: center;
+            font-weight: 400;
+            margin: 0 44px 0 auto;
+            text-align: end;
+
+            @include mq("tablet") {
+                font-size: 2.8rem;
+                line-height: calc(51 / 28);
+                margin: unset;
+                text-align: center;
+            }
+        }
+
+        &-h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            font-family: $font-mincho;
+            line-height: calc(32 / 24);
+            color: $color-org;
+            text-align: center;
+            margin-top: 40px;
+
+            @include mq("tablet") {
+                font-size: 4rem;
+                line-height: calc(48 / 40);
+                margin-top: 60px;
+            }
+        }
+    }
+
+    &__job {
+        padding-top: 30px;
+
+        @include mq("tablet") {
+            padding-top: 80px;
+        }
+
+        & .info-job__row {
+            margin-top: 20px;
+
+            @include mq("tablet") {
+                margin-top: 40px;
+            }
+        }
+
+        &-desc {
+            font-family: $font-primary;
+            font-size: 1.4rem;
+            font-weight: 400;
+            line-height: calc(24 / 14);
+            text-align: start;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+                line-height: calc(32 / 16);
+                text-align: center;
+            }
+
+            &:first-child {
+                margin-bottom: 30px;
+
+                @include mq("tablet") {
+                    margin-bottom: 40px;
+                }
+            }
+
+            b {
+                font-weight: 700;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 50px;
+    // max-width: 286px;
+
+    @include mq("tablet") {
+        margin: 40px 0 80px;
+    }
+
+    &-link {
+        // width: ;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        color: $color-black;
+        margin: 0 4px;
+        width: 32px;
+        height: 32px;
+        border-radius: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        @include mq("tablet") {
+            margin: 0 2px;
+        }
+
+        &:hover {
+            background-color: #ddd7cf;
+            color: #fff;
+        }
+
+        &.active {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background-color: #ddd7cf;
+            color: $color-white;
+        }
+
+        img {
+            display: block;
+        }
+
+        &.next {
+            transform: rotate(180deg);
+            margin-left: 18px;
+
+            @include mq("tablet") {
+                margin-left: 30px;
+            }
+        }
+
+        &.prev {
+            margin-right: 18px;
+
+            @include mq("tablet") {
+                margin-right: 30px;
+            }
+        }
+    }
+}
+
+.color-bg {
+    background-color: #F9F8F7;
+}
+
+//PARTNERTEST//
+.heading-frt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.5px;
+    color: #BA4F4F;
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    letter-spacing: .05em;
+    line-height: 3.5;
+    font-weight: 600;
+    margin-top: -17px;
+
+    span {
+        font-size: 2.8rem;
+        font-style: italic;
+        line-height: 1.82;
+        letter-spacing: normal;
+    }
+
+    &>img {
+        margin-bottom: -6px;
+        width: 12px;
+
+        &:last-child {
+            transform: rotate(250deg);
+        }
+    }
+
+    @include mq("tablet") {
+        margin-top: -47px;
+        font-size: 2.6rem;
+        line-height: 1.76;
+        gap: 11.5px;
+
+        span {
+            font-size: 5.7rem;
+            line-height: 1.33;
+        }
+        &>img {
+            width: auto;
+            margin-bottom: -15px;
+        }
+    }
+}
+
+.heading-scd {
+    text-align: center;
+    color: #B19D7F;
+    font-family: $font-mincho;
+    font-weight: 700;
+    margin-top: 0px;
+
+    &>p {
+        font-size: 3rem;
+        line-height: 1.33;
+        letter-spacing: .05em;
+    }
+
+    span {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 2px;
+            left: 14px;
+            width: 2px;
+            height: 2px;
+            border-radius: 10px;
+            background: #B19D7F;
+        }
+    }
+
+    @include mq("tablet") {
+        margin-top: -8px;
+
+        &>p {
+            font-size: 7.6rem;
+            line-height: 1.32;
+            letter-spacing: normal;
+        }
+
+        span {
+
+            &::before {
+                top: 10px;
+                left: 40px;
+                width: 5.1px;
+                height: 5.1px;
+            }
+        }
+    }
+}
+
+.heading__btn {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    a {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        background: linear-gradient(to right, #EB88A2, #D53962);
+        text-decoration: none;
+        width: 335px;
+        height: 70px;
+        border-radius: 5px;
+        padding-block: 16px 20px;
+        padding-inline: 20px;
+        box-shadow: 4px 4px 10px rgb(0 0 0 / .16);
+        transition: opacity .3s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        .btn-top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            img{
+                width: 20px;
+                margin-top: 5px;
+            }
+
+            p {
+                font-family: $font-mincho;
+                font-size: 2.3rem;
+                font-weight: 700;
+                line-height: 1.13;
+
+                &>span {
+                    font-family: $font-primary;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    letter-spacing: .05em;
+                }
+            }
+        }
+
+        &>span {
+            display: inline-block;
+            font-size: 1.4rem;
+            margin-top: 8px;
+            font-weight: 700;
+            letter-spacing: .05em;
+        }
+
+        .btn-btm {
+            margin-left: 48px;
+            img{
+                width: 26px;
+            }
+            
+        }
+    }
+
+    a:last-child {
+        background: linear-gradient(to right, #6890C7, #17498D);
+    }
+
+    @include mq("tablet") {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        a {
+            display: block;
+            text-decoration: none;
+            width: 417px;
+            height: 104px;
+            border-radius: 20px;
+            padding-block: 31px;
+            padding-inline: 25px 20px;
+    
+            .btn-top {
+                flex-direction: row;
+                align-items: center;
+                gap: 9px;
+
+                img{
+                    width: auto;
+                    margin-top: 0px;
+                }
+    
+                p {
+                    font-size: 2.8rem;
+                    font-weight: 700;
+                    line-height: 1.14;
+    
+                    &>span {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+    
+            &>span {
+                font-size: 1.6rem;
+                margin-top: 8px;
+            }
+    
+            .btn-btm {
+                margin-left: 66px;
+                margin-bottom: -5px;
+                img{
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.note {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 11px;
+    margin-bottom: 13px;
+    @include mq("tablet") {
+        font-size: 1.2rem;
+        line-height: 1.67;
+        margin-top: 21px;
+        margin-bottom: 0px;
+    }
+}

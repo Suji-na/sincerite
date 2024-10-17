@@ -1,0 +1,92 @@
+.title {
+    margin-top: 51px;
+    background-image: url(../../images_new/title/title-bg-sp.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3px 0 11px;
+    position: relative;
+    isolation: isolate;
+    
+    @include mq("tablet") {
+        background-image: url(../../images_new/title/title-bg.jpg);
+        margin-top: 90px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.4;
+        background-color: $color-white;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        h1 {
+            font-family: $font-mincho;
+            font-size: 1.7rem;
+            text-align: center;
+            @include mq("tablet") {
+                font-size: 3.2rem;
+            }
+
+            &>span {
+                color: $color-red;
+                font-size: 1.2rem;
+                letter-spacing: 0.05em;
+                line-height: 1.769;
+                margin-right: 14px;
+                
+                @include mq("tablet") {
+                    font-size: 2.6rem;
+                    line-height: 1.769;
+                    margin-right: 23px;
+                }
+
+                &::before,
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    width: 1px;
+                    height: 19px;
+                    
+                    @include mq("tablet") {
+                        width: 2px;
+                        height: 35px;
+                    }
+                }
+
+                &::before {
+                    background-color: $color-red;
+                    transform: rotate(-35deg) translateY(5px);
+                    margin-right: 14px;
+                    
+                    @include mq("tablet") {
+                        margin-right: 27px;
+                    }
+                }
+
+                &::after {
+                    background-color: $color-red;
+                    transform: rotate(35deg) translateY(5px);
+                    margin-left: 14px;
+                    
+                    @include mq("tablet") {
+                        margin-left: 27px;
+                    }
+                }
+
+                span {
+                    font-size: 2.8rem;
+                    align-self: flex-end;
+                    font-style: italic;
+                    
+                    @include mq("tablet") {
+                        font-size: 5.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

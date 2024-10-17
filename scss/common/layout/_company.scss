@@ -1,0 +1,206 @@
+.company {
+    .high-class {
+        &.-cpb {
+            padding-bottom: 30px;
+
+            @include mq("tablet") {
+                padding-bottom: 75px;
+            }
+        }
+
+        &__wrapper {
+            &>img {
+                max-width: 100px;
+                margin   : 0 auto 30px;
+
+                @include mq("tablet") {
+                    max-width: 160px;
+                    margin   : 0 auto 28px;
+                }
+            }
+        }
+    }
+
+    &__wrapper {
+        max-width: 900px;
+        margin   : 0 auto;
+        padding  : 60px 0;
+
+        @include mq("tablet") {
+            padding: 80px 0;
+        }
+    }
+
+    &__box {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : stretch;
+        border-bottom  : 1px solid #DDD7CF;
+
+        @include mq("tablet") {
+            flex-direction: row;
+        }
+
+        &:first-child {
+            border-top: 2px solid #ddd7cf;
+        }
+
+        &-point {
+            background-color: #F9F8F7;
+            padding         : 8px 0 8px 16px;
+            font-size       : 1.4rem;
+            line-height     : 1.7;
+            letter-spacing  : 0.05em;
+            font-weight     : 700;
+            font-family     : $font-primary;
+
+            @include mq("tablet") {
+                padding   : 36px 0 36px 50px;
+                flex-basis: 220px;
+                font-size : 1.6rem;
+            }
+        }
+
+        &-dtls {
+            padding       : 12px 16px 30px 16px;
+            flex-grow     : 1;
+            font-size     : 1.4rem;
+            font-weight   : 400;
+            line-height   : 1.7;
+            font-family   : $font-primary;
+            letter-spacing: 0.05em;
+
+            @include mq("tablet") {
+                padding       : 36.5px 0 36.5px 48px;
+                font-size     : 1.6rem;
+                letter-spacing: unset;
+            }
+
+            &>a {
+                font-size               : 1.4rem;
+                font-weight             : 400;
+                line-height             : 1.7;
+                font-family             : $font-primary;
+                color                   : $color-black;
+                // text-underline-offset: 2px;
+                position                : relative;
+                text-decoration         : unset;
+
+                @include mq("tablet") {
+                    font-size: 1.6rem;
+                }
+
+                >span {
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content         : "";
+                        background-color: #333333;
+                        position        : absolute;
+                        height          : 1px;
+                        width           : 100%;
+                        bottom          : 0;
+                        left            : 0;
+                    }
+
+                    &::after {
+                        width: 0;
+                    }
+
+                    &:hover {
+                        &::before {
+                            width: 0;
+                        }
+
+                        &::after {
+                            width     : 100%;
+                            transition: width 0.3s ease;
+                        }
+                    }
+                }
+
+                &::after {
+                    content         : "";
+                    background-image: url("../../images_new//common/link-box.svg");
+                    display         : inline-block;
+                    width           : 12px;
+                    height          : 11px;
+                    margin-left     : 10px;
+
+                }
+
+            }
+        }
+    }
+
+    &__banner {
+        background-color: #F8F4F0;
+        padding         : 60px 0;
+
+        @include mq("tablet") {
+            padding: 100px 0;
+
+        }
+
+        &-img {
+            background-image : url("../../images_new/company/company-banner.jpg");
+            background-size  : cover;
+            background-repeat: no-repeat;
+            width            : 335px;
+            height           : 86px;
+            margin           : 0 auto;
+            // display: block;
+            display          : flex;
+            justify-content  : center;
+            align-items      : center;
+            text-decoration  : unset;
+            transition       : all 0.3s ease;
+            box-shadow       : 8px 8px 18px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+            position         : relative;
+
+            @include mq("tablet") {
+                width : 445px;
+                height: 114px;
+            }
+
+            &::after {
+                position           : absolute;
+                content            : "";
+                width              : 13px;
+                height             : 5px;
+                background-image   : url(../../images_new/company/arw-white.svg);
+                background-position: center;
+                background-size    : contain;
+                background-repeat  : no-repeat;
+                right              : 30px;
+                top                : 50%;
+                transform          : translateY(-50%);
+                transition         : all 0.3s ease;
+            }
+
+            &:hover {
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -2px 5px rgba(255, 255, 255, 0.7);
+                opacity   : 0.8;
+            }
+
+            &>span {
+                font-size     : 1.4rem;
+                line-height   : calc(49/20);
+                font-weight   : 500;
+                letter-spacing: 0.05em;
+                font-family   : $font-primary;
+                color         : $color-white;
+
+                @include mq("tablet") {
+                    font-size  : 2rem;
+                    font-weight: 600;
+                }
+
+            }
+
+
+        }
+    }
+}

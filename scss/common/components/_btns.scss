@@ -1,0 +1,681 @@
+.btn-contact {
+    width              : 100%;
+    max-width          : 335px;
+    margin             : 0 auto;
+    height             : 70px;
+    color              : $color-white;
+    display            : flex;
+    flex-direction     : column;
+    align-items        : flex-start;
+    justify-content    : center;
+    text-decoration    : none;
+    box-shadow         : 4px 4px 4px rgba(0, 0, 0, 0.1);
+    padding            : 0 22px 0 14px;
+    background-position: center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
+    border             : 2px solid #baa05a;
+    border-radius      : 4px;
+    transition         : all 0.3s ease;
+    position           : relative;
+
+    @include mq("tablet") {
+        max-width: 335px;
+        height   : 91px;
+        padding  : 0 22px 0 15px;
+    }
+
+    &:hover {
+        // opacity: 0.7;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -2px 1px rgba(255, 255, 255, 0);
+    }
+
+    &.-ylw {
+        background-image: url(../../images_new/top/btn-ylw-bg.png);
+        position        : relative;
+        margin-bottom   : 10px;
+        box-shadow      : 8px 8px 18px rgba(0, 0, 0, 0.2),
+            -7px -6px 10px rgba(255, 255, 255, 0.2);
+
+        @include mq("tablet") {
+            margin-right : 20px;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            // opacity: 0.7;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -2px 1px rgba(255, 255, 255, 0);
+        }
+    }
+
+    .yellow {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        gap            : 8px;
+
+
+        &::before {
+            content         : "";
+            width           : 43px;
+            height          : 43px;
+            background-image: url(../../images_new/top/phone.svg);
+            display         : inline-block;
+            flex            : 0 0 43px;
+
+            @include mq("tablet") {
+                top: 23px;
+            }
+        }
+
+        &::after {
+            content            : "";
+            width              : 13px;
+            height             : 5px;
+            background-image   : url(../../images_new/top/arw-white.svg);
+            background-position: center;
+            background-size    : contain;
+            background-repeat  : no-repeat;
+            display            : inline-block;
+
+            @include mq("tablet") {
+                position: absolute;
+                right   : 22px;
+                top     : 44px;
+            }
+        }
+
+        &-mrg {
+            @include mq("tablet") {
+                margin-left: -6px;
+            }
+        }
+    }
+
+    &.-brw {
+        background-image: url(../../images_new/top/btn-brw-bg.png);
+        position        : relative;
+        border          : 2px solid #b1907f;
+        box-shadow      : 8px 8px 18px rgba(0, 0, 0, 0.2), -7px -6px 10px rgba(255, 255, 255, 0.2);
+
+        @include mq("tablet") {
+            margin-left: 0;
+        }
+
+        &:hover {
+            // opacity: 0.7;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -2px 1px rgba(255, 255, 255, 0);
+        }
+
+        & .brown {
+            &::before {
+                content         : "";
+                width           : 43px;
+                height          : 43px;
+                background-image: url(../../images_new/top/location.svg);
+                left            : 14px;
+                top             : 11px;
+
+                @include mq("tablet") {
+                    top: 23px;
+                }
+            }
+
+            .btn-contact-txt-lg {
+                margin-right: 38px;
+            }
+        }
+    }
+
+    &-txt-lg {
+        font-size  : 2rem;
+        line-height: 1.4;
+        font-weight: 600;
+
+        em {
+            font-size  : 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    &-txt-sm {
+        font-size     : 1.1rem;
+        letter-spacing: 0.05em;
+        text-align    : right;
+        display       : flex;
+        align-items   : center;
+        gap           : 5px;
+
+        &::before {
+            // position        : absolute;
+            content         : "";
+            width           : 100%;
+            height          : 1px;
+            background-color: $color-white;
+            display         : inline-block;
+        }
+
+        &-line {
+            flex-shrink: 0;
+
+            &.-flex {
+
+                @include mq("tablet") {
+                    display        : flex;
+                    justify-content: center;
+                    align-items    : center;
+                    text-align     : left;
+                    gap            : 8px;
+                    margin-top     : -4px;
+                }
+            }
+        }
+
+        @include mq("tablet") {}
+    }
+
+    &-num {
+        font-size  : 2rem;
+        line-height: calc(40/20);
+        font-weight: 600;
+        font-family: $font-primary;
+    }
+}
+
+.btn-primary {
+    font-size          : 1.4rem;
+    font-weight        : 400;
+    line-height        : 2.5;
+    color              : $color-black;
+    text-decoration    : none;
+    width              : 285px;
+    height             : 60px;
+    border-radius      : 71px;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    background-color   : $color-white;
+    // border          : 1px solid #b19d7f;
+    margin             : 30px auto 30px;
+    transition         : all 0.3s ease;
+    position           : relative;
+    bottom             : 0;
+    box-shadow         : 6px 6px 14px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.35);
+
+    @include mq("tablet") {
+        font-size : 1.6rem;
+        width     : 380px;
+        height    : 75px;
+        margin    : 50px auto 60px;
+        box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.35);
+
+    }
+
+    &::after {
+        position           : absolute;
+        content            : "";
+        width              : 13px;
+        height             : 5px;
+        background-image   : url(../../images_new/top/arw.svg);
+        background-position: center;
+        background-size    : contain;
+        background-repeat  : no-repeat;
+        right              : 30px;
+        top                : 50%;
+        transform          : translateY(-50%);
+        transition         : all 0.3s ease;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+            -1px -2px 1px rgba(255, 255, 255, 0.7);
+        bottom: -3px;
+    }
+
+
+
+    &.-no {
+        &:hover {
+            letter-spacing: normal;
+        }
+    }
+
+    &.-voice {
+        margin: 0 auto;
+    }
+
+    &.-pnk {
+        background-color: $color-pink;
+        border          : none;
+        color           : $color-white;
+        box-shadow      : 6px 6px 14px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+
+        &::after {
+            background-image: url(../../images_new/top/arw-white.svg);
+        }
+
+
+        &:hover {
+            // background-color: $color-white;
+            // color           : $color-black;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+                0px 0px 1px rgba(255, 255, 255, 0.7);
+
+            // &::after {
+            //     background-image: url(../../images_new/top/arw.svg);
+            // }
+
+        }
+    }
+
+    &.-info {
+        margin-top: 30px;
+
+        @include mq("tablet") {
+            margin-top: 80px;
+        }
+
+        &::after {
+            left            : 30px;
+            right           : initial;
+            background-image: url(../../images_new/top/arw-left.svg);
+        }
+    }
+}
+
+.btn-secondary {
+    font-size       : 1.4rem;
+    font-weight     : 400;
+    line-height     : 2.5;
+    color           : $color-black;
+    text-decoration : none;
+    width           : 286px;
+    height          : 60px;
+    border-radius   : 86px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    background-color: $color-white;
+    box-shadow      : 6px 6px 14px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+    transition      : all 0.3s ease;
+    position        : relative;
+
+    @include mq("tablet") {
+        box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+        font-size : 1.6rem;
+        width     : 400px;
+        height    : 86px;
+
+    }
+
+    &::after {
+        position           : absolute;
+        content            : "";
+        width              : 13px;
+        height             : 5px;
+        background-image   : url(../../images_new/top/arw.svg);
+        background-position: center;
+        background-size    : contain;
+        background-repeat  : no-repeat;
+        right              : 30px;
+        top                : 50%;
+        transform          : translateY(-50%);
+    }
+
+    &::before {
+        position           : absolute;
+        content            : "";
+        width              : 46px;
+        height             : 46px;
+        background-image   : url(../../images_new/top/info/info-01.svg);
+        background-position: center;
+        background-size    : contain;
+        background-repeat  : no-repeat;
+        left               : 7px;
+        top                : 7px;
+
+        @include mq("tablet") {
+            width : 72px;
+            height: 72px;
+        }
+    }
+
+    &.-info2 {
+        &::before {
+            background-image: url(../../images_new/top/info/info-02.svg);
+        }
+    }
+
+    &.-info3 {
+        &::before {
+            background-image: url(../../images_new/top/info/info-03.svg);
+        }
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+            -1px -2px 5px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.btn {
+    &__home {
+        margin: 80px auto;
+
+        @include mq("tablet") {
+            margin: 100px auto;
+        }
+
+        &-link {
+            font-size      : 1.4rem;
+            font-family    : $font-primary;
+            font-weight    : 400;
+            width          : 100%;
+            max-width      : 286px;
+            height         : 60px;
+            display        : flex;
+            justify-content: center;
+            align-items    : center;
+            gap            : 12px;
+            margin         : 0 auto;
+            box-shadow     : 6px 6px 14px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+            border-radius  : 71px;
+            text-decoration: unset;
+            color          : $color-black;
+            transition     : all 0.3s ease;
+            position       : relative;
+            bottom         : 0;
+
+            @include mq("tablet") {
+                box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+                font-size : 1.6rem;
+                max-width : 320px;
+                height    : 75px;
+            }
+
+            &::before {
+                content            : "";
+                width              : 19px;
+                height             : 16px;
+                background-image   : url(./../../images_new/common/home-black.svg);
+                background-position: center;
+                background-size    : contain;
+                background-repeat  : no-repeat;
+                display            : inline-block;
+            }
+
+            &:hover {
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+                    -1px -2px 5px rgba(255, 255, 255, 0.7);
+                bottom: -3px;
+            }
+        }
+    }
+
+    &-link-line {
+        max-width      : 612px;
+        padding        : 19px 0;
+        display        : block;
+        text-decoration: none;
+        color          : $color-black;
+        font-size      : 1.4rem;
+        line-height    : 1.64;
+        border-top     : 1px solid $color-lgt-brown;
+        border-bottom  : 1px solid $color-lgt-brown;
+        position       : relative;
+        display        : flex;
+        align-items    : center;
+        gap            : 5px;
+        margin-inline  : auto;
+        transition     : opacity 0.3s ease;
+
+        @include mq("tablet") {
+            padding    : 13px 0;
+            font-size  : 1.6rem;
+            line-height: 2.5;
+        }
+
+        &::after {
+            content            : "";
+            display            : block;
+            width              : 12px;
+            height             : 4px;
+            position           : absolute;
+            top                : 50%;
+            right              : 12px;
+            display            : block;
+            background-image   : url(../../images_new/top/arw.svg);
+            background-position: center;
+            background-repeat  : no-repeat;
+            transition         : right 0.3s ease;
+        }
+
+        span {
+            display        : block;
+            text-decoration: underline;
+
+            &.link-tag {
+                background-color: $color-org;
+                display         : inline-block;
+                padding         : 1px 8px;
+                color           : $color-white;
+                font-size       : 1rem;
+                font-weight     : 500;
+                line-height     : 1.833rem;
+                letter-spacing  : 0.05em;
+                clip-path       : polygon(8.7% 0%, 100% 0, 100% 73%, 91.3% 100%, 0 100%, 0 23%);
+                margin-right    : 11px;
+                text-decoration : none;
+
+                @include mq("tablet") {
+                    padding  : 2px 9px 2px 8px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        &:hover {
+            opacity: 0.7;
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+
+    &-more {
+        all             : unset;
+        cursor          : pointer;
+        width           : 286px;
+        height          : 60px;
+        margin          : 0 auto;
+        // border: 1px solid $color-org;
+        border-radius   : 71px;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        background-color: $color-white;
+        position        : relative;
+        font-size       : 1.4rem;
+        box-shadow      : 6px 6px 14px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+        transition      : box-shadow 0.3s ease;
+
+        @include mq("tablet") {
+            font-size : 1.6rem;
+            width     : 320px;
+            height    : 75px;
+            box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.15), -7px -6px 10px rgba(255, 255, 255, 0.7);
+        }
+
+        &::after {
+            content          : "";
+            display          : block;
+            width            : 12px;
+            height           : 7px;
+            background-image : url(../../images_new/common/down-arw.svg);
+            background-repeat: no-repeat;
+            background-size  : contain;
+            position         : absolute;
+            top              : 50%;
+            right            : 22px;
+            transform        : translateY(-50%);
+            transition       : transform 0.3s ease;
+        }
+
+        span {
+            &.more {
+                display: block;
+            }
+
+            &.less {
+                display: none;
+            }
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2), -1px -2px 1px rgba(255, 255, 255, 0.7);
+
+            &::after {
+                transform: translateY(-20%);
+            }
+        }
+
+        &.open {
+            &::after {
+                transform: translateY(-50%) rotateX(180deg);
+            }
+
+            span {
+                &.more {
+                    display: none;
+                }
+
+                &.less {
+                    display: block;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateY(-80%) rotateX(180deg);
+                }
+            }
+        }
+    }
+}
+
+
+.btn-prev {
+    font-size          : 1.4rem;
+    font-weight        : 400;
+    line-height        : 2.5;
+    color              : $color-black;
+    text-decoration    : none;
+    width              : 285px;
+    height             : 60px;
+    border-radius      : 71px;
+    display            : flex;
+    justify-content    : center;
+    align-items        : center;
+    background-color   : $color-white;
+    // border          : 1px solid #b19d7f;
+    margin             : 30px auto 30px;
+    transition         : all 0.3s ease;
+    position           : relative;
+    box-shadow         : 8px 8px 18px rgba(0, 0, 0, 0.15),
+        -7px -6px 10px rgba(255, 255, 255, 0.7);
+
+    @include mq("tablet") {
+        font-size: 1.6rem;
+        width    : 320px;
+        height   : 75px;
+        margin   : 50px auto 60px;
+    }
+
+    &::after {
+        position           : absolute;
+        content            : "";
+        width              : 13px;
+        height             : 5px;
+        background-image   : url(../../images_new/top/arw-left.svg);
+        background-position: center;
+        background-size    : contain;
+        background-repeat  : no-repeat;
+        left               : 30px;
+        top                : 50%;
+        transform          : translateY(-50%);
+        transition         : all 0.3s ease;
+    }
+
+    &:hover {
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),
+            -1px -2px 1px rgba(255, 255, 255, 0.7);
+    }
+
+}
+
+.underline {
+    display               : inline-block;
+    // padding-bottom     : 2px;
+    background-image      : linear-gradient(#333 0 0);
+    background-position   : right bottom;
+    background-size       : 100% 1px;
+    background-repeat     : no-repeat;
+    transition            : background-size 0.5s ease;
+
+    &:hover {
+        background-size: 0% 1px;
+    }
+}
+
+.underline-anmi {
+    position       : relative;
+    display        : inline-block;
+    transition     : opacity 0.5s ease !important;
+    text-decoration: unset;
+    line-height    : 1.2 !important;
+
+    &:hover {
+        opacity: 1;
+
+        &::before {
+            width: 0;
+        }
+
+        &::after {
+            left : 0;
+            right: auto;
+            width: 100%;
+            content: none;
+        }
+    }
+
+    &::before {
+        content         : "";
+        position        : absolute;
+        display         : block;
+        width           : 100%;
+        height          : 1px;
+        right           : 0;
+        bottom          : 0;
+        background-color: #fff;
+    }
+
+    &::after {
+        content                           : "";
+        position                          : absolute;
+        display                           : block;
+        width                             : 100%;
+        height                            : 1px;
+        right                             : 0;
+        width                             : 0;
+        bottom                            : 0;
+        -webkit-transition-property       : width;
+        transition-property               : width;
+        -webkit-transition-duration       : 0.3s;
+        transition-duration               : 0.3s;
+        -webkit-transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        transition-timing-function        : cubic-bezier(0.65, 0.05, 0.36, 1);
+        background-color                  : #ebebeb;
+    }
+}

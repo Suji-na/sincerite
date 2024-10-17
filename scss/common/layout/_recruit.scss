@@ -1,0 +1,1123 @@
+.rct-heading {
+    padding: 32px 0;
+    text-align: left;
+    background-image: url(./../../images_new/recruit/recruit-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mq("tablet") {
+        padding: 150px 0 148px;
+    }
+
+    .heading-secondary {
+        text-align: left;
+    }
+}
+
+.rct-high-class {
+    @include mq("tablet") {
+        padding-bottom: 75px !important;
+    }
+}
+
+.rct-top-desc {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    font-family: $font-mincho;
+    text-align: center;
+
+    @include mq("tablet") {
+        font-size: 3rem;
+    }
+}
+
+.rct-cts {
+    background-image: url(./../../images_new/recruit/recruit-bg-2sp.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 55px 0 50px;
+    margin-bottom: 80px;
+
+    @include mq("tablet") {
+        padding: 142px 0 142px;
+        margin-bottom: 100px;
+        background-image: url(./../../images_new/recruit/recruit-bg-2.jpg);
+    }
+
+    &__desc {
+        font-size: 2.2rem;
+        font-family: $font-mincho;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 3.6rem;
+        }
+    }
+}
+
+.rct-cta {
+    margin-top: 60px;
+
+    @include mq("tablet") {
+        margin-top: 80px;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 60px;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            margin-bottom: 80px;
+        }
+
+        &.-end {
+            justify-content: flex-end;
+            flex-direction: column-reverse;
+
+            @include mq("tablet") {
+                flex-direction: row;
+            }
+        }
+    }
+
+    &__fig {
+        max-width: 1120px;
+    }
+
+    &__content {
+        // margin-top: -40px;
+        margin: -40px 20px 0;
+
+        @include mq("tablet") {
+            margin-left: -146px;
+            margin-top: 0;
+            margin-right: 0;
+
+            &.-lft {
+                margin-right: -146px;
+                margin-left: 0;
+                position: relative;
+            }
+        }
+    }
+
+    &__content-inr {
+        max-width: 686px;
+        padding: 80px 17px 30px;
+        background-color: #f9f8f7;
+        border-radius: 5px;
+
+        @include mq("tablet") {
+            padding: 75px 60px 60px;
+        }
+    }
+
+    &__ttl {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        padding: 0 0 30px;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            padding: 0 0 0 45px;
+        }
+
+        &-en {
+            font-size: 4rem;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+            font-family: $font-secondary;
+            position: relative;
+            color: #58cabe;
+
+            @include mq("tablet") {
+                line-height: 1.2;
+                font-size: 6rem;
+                line-height: 0.7;
+                margin-right: 16px;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 44px;
+                background-color: #58cabe;
+                left: 50%;
+                transform: translateX(-50%) skewY(-30deg);
+                top: -45px;
+                rotate: 30deg;
+
+                @include mq("tablet") {
+                    transform: translateX(-50%);
+                    left: -25px;
+                    top: -12px;
+                    height: 60px;
+                }
+            }
+        }
+
+        &-jp {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.6;
+            letter-spacing: 0.05em;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__main-ttl {
+        font-size: 2rem;
+        line-height: 1.6;
+        // letter-spacing: 0.05em;
+        font-weight: 500;
+        margin: 0 0 20px;
+
+        @include mq("tablet") {
+            font-size: 3rem;
+            margin: 45px 0 30px;
+        }
+    }
+
+    &__txt {
+        font-size: 1.4rem;
+        line-height: 2;
+        letter-spacing: 0.05em;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.rct-env {
+    background-color: #f8f4f0;
+    padding-bottom: 80px;
+    // padding-top: 40px;
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
+
+    &__col {
+        @include mq("tablet") {
+            width: calc(33.33% - 24px);
+        }
+    }
+
+    &__content {
+        background-color: $color-white;
+        height: 100%;
+
+        img {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    &__content-box {
+        padding: 0 15px 30px;
+
+        @include mq("tablet") {
+            padding: 0 25px 40px;
+        }
+    }
+
+    &__ttl {
+        font-size: 2rem;
+        // line-height: ;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: #b19d7f;
+        text-align: center;
+        margin: 0 0 16px;
+        margin-top: 25px;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 104px;
+            height: 102px;
+            background-image: url(./../../images_new/recruit/env-no-01.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            top: -70px;
+            left: 0;
+        
+        }
+
+        @include mq("tablet") {
+            font-size: 2.4rem;
+            margin-top: 35px;
+
+            &::before {
+                width: 132px;
+                height: 128px;
+                top: -104px;
+            }
+        }
+
+        &.-two {
+            &::before {
+                background-image: url(./../../images_new/recruit/env-no-02.svg);
+            }
+        }
+        &.-three {
+            &::before {
+                background-image: url(./../../images_new/recruit/env-no-03.svg);
+            }
+        }
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        line-height: 2;
+        letter-spacing: 0.05em;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.rct-job {
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    @include mq("tablet") {
+        padding-bottom: 140px;
+        padding-top: 0;
+    }
+
+    .heading-primary {
+        @include mq("tablet") {
+            padding-top: 100px;
+        }
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        text-align: justify;
+        font-weight: 700;
+        margin: 30px 0 20px;
+
+        @include mq("tablet") {
+            font-size: 2rem;
+            margin: 0 0 40px;
+            text-align: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 160px;
+        }
+
+        &.-border {
+            margin-top: 60px;
+
+            @include mq("tablet") {
+                margin-top: 109px;
+            }
+        }
+    }
+
+    &__col-sm {
+        @include mq("tablet") {
+            // width: calc(25.7% - 125px);
+            width: 14%;
+        }
+    }
+
+    &__col-lg {
+        @include mq("tablet") {
+            // width: calc(74.29% - 125px);
+            width: 74%;
+        }
+    }
+
+    &__ttl {
+        font-size: 2.3rem;
+        line-height: 1.7;
+        font-weight: 500;
+        margin-bottom: 15px;
+        text-align: center;
+
+        @include mq("tablet") {
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    &__txt {
+        font-size: 1.4rem;
+        line-height: 1.6;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__btn-box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding-top: 10px;
+
+        @include mq("tablet") {
+            padding-top: 20px;
+        }
+    }
+
+    &__btn {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color-white;
+        background-color: #b19d7f;
+        border-radius: 3px;
+        padding: 4px 12px 6px;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+            padding: 4px 12px 6px;
+        }
+    }
+
+    &__dborder {
+        padding: 18px 0 25px;
+        border-top: 2px solid #b19d7f;
+        border-bottom: 2px solid #b19d7f;
+
+        @include mq("tablet") {
+            padding: 30px 0;
+        }
+    }
+
+    &__lborder {
+        padding: 12px 0 10px;
+        border-bottom: 1px solid #b19d7f;
+
+        @include mq("tablet") {
+            padding: 24px 0;
+        }
+    }
+
+    &__inr-row {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 79px;
+        }
+    }
+
+    &__inr-col-sm {
+        @include mq("tablet") {
+            // width: calc(25.31% - 79px);
+            width: 18%;
+        }
+    }
+
+    &__inr-col-lg {
+        @include mq("tablet") {
+            // width: calc(74.68% - 79px);
+            width: 74.68%;
+        }
+    }
+
+    &__inr-ttl {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+        padding-left: 16px;
+        position: relative;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 3px;
+            height: 16px;
+            border-radius: 1px;
+            background-color: #b19d7f;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__inr-desc {
+        font-size: 1.4rem;
+        line-height: 2;
+        letter-spacing: 0.05em;
+        padding-left: 15px;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+            padding-left: 0;
+        }
+    }
+
+    &__btns {
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-align: center;
+        color: $color-white;
+        background-color: #58cabe;
+        border-radius: 5px;
+        padding: 27px 10px 31px 10px;
+        text-decoration: none;
+        display: block;
+        max-width: 420px;
+        margin: 30px auto 0;
+        position: relative;
+        transition: all 0.3s ease;
+
+        @include mq("tablet") {
+            font-size: 2.2rem;
+            text-align: left;
+            margin: 60px auto 0;
+            padding: 27px 10px 31px 97px;
+        }
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 26px;
+            height: 26px;
+            background-image: url(./../../images_new/recruit/arw-dwn.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq("tablet") {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.rct-int {
+    background-color: #f9f8f7;
+    padding-bottom: 40px;
+    padding-top: 40px;
+
+    @include mq("tablet") {
+        padding-top: 0;
+        padding-bottom: 60px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        // margin-bottom: 40px;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 28px;
+            // margin-bottom: 60px;
+        }
+
+        // &.-reverse {
+        //     flex-direction: column-reverse;
+
+        //     @include mq("tablet") {
+        //         flex-direction: row;
+        //     }
+        // }
+    }
+
+    &__col {
+        margin-bottom: 30px;
+        @include mq("tablet") {
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+ 
+
+    &__col-sm {
+        @include mq("tablet") {
+            width: 41%;
+        }
+    }
+
+    &__col-lg {
+        @include mq("tablet") {
+            width: 59%;
+        }
+    }
+
+    &__content {
+        padding: 15px 15px 20px;
+        background-color: $color-white;
+height: 100%;
+
+        @include mq("tablet") {
+            padding: 20px 30px 40px;
+        }
+
+        // &.-left {
+        //     @include mq("tablet") {
+        //         padding-left: 30px;
+        //         padding-right: 0;
+        //     }
+        // }
+    }
+
+    &__ttl {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #DDD7CF;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+            line-height: 2;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__desc {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2;
+        letter-spacing: 0.05em;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+// .rct-contact {
+//     .inquiry-form {
+//         padding: 35px 0 65px 0;
+
+//         @include mq("tablet") {
+//             padding: 25px 0 90px 0;
+//             width: 95%;
+//             margin: 0 auto;
+//         }
+
+//         @include mq("bootstrap-lg") {
+//             width: 80%;
+//             padding: 32px 0 100px 0;
+//         }
+
+//         @include mq("desktop") {
+//             width: 72%;
+//             margin: 0 auto;
+//         }
+
+//         &__title {
+//             font-size: 1.5rem;
+//             line-height: 1.6;
+//             font-weight: 700;
+//             text-align: center;
+//             color: $color-black;
+//             margin: 0 0 30px;
+
+//             @include mq("tablet") {
+//                 line-height: 1.8;
+//                 margin-bottom: 50px;
+//                 font-size: 1.8rem;
+//             }
+//         }
+
+//         &__row {
+//             display: flex;
+//             gap: 30px;
+//             margin-bottom: 25px;
+
+//             &.-f-start {
+//                 align-items: flex-start;
+
+//                 .inquiry-form__col-sm {
+//                     margin-top: 15px;
+//                 }
+//             }
+//         }
+
+//         &__col-sm {
+//             width: 26.67%;
+//         }
+//         &__col-lg {
+//             width: 70%;
+//         }
+
+//         &__inner-row {
+//             display: flex;
+//             gap: 10px;
+//         }
+
+//         &__inner-col {
+//             width: 33.33%;
+//             position: relative;
+//             z-index: 1;
+//             &.-arw {
+//                 &::after {
+//                     position: absolute;
+//                     content: "";
+//                     width: 60px;
+//                     height: 48px;
+//                     background-image: url(./../../images_new/recruit/arw.svg);
+//                     background-position: center;
+//                     background-size: contain;
+//                     background-repeat: no-repeat;
+//                     right: 0;
+//                     top: 1px;
+//                     z-index: 0;
+//                 }
+//             }
+
+//             &.-radio {
+//                 border: solid 1px #d0d0d0;
+//                 padding: 14px 15px 16px;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: center;
+//             }
+//         }
+
+//         &__label-wrapper {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             margin-bottom: 10px;
+
+//             @include mq("tablet") {
+//                 margin-bottom: 15px;
+//                 height: 100%;
+//                 margin-bottom: 0;
+//             }
+//         }
+
+//         &__label,
+//         &__value {
+//             font-size: 1.6rem;
+//             line-height: 1.7;
+//             color: $color-black;
+//             margin-bottom: 0;
+
+//             @include mq("tablet") {
+//                 font-size: 1.6rem;
+//             }
+
+//             @include mq("bootstrap-lg") {
+//                 font-size: 1.6rem;
+//             }
+
+//             a {
+//                 text-decoration: none;
+//                 color: $color-black;
+//             }
+//         }
+
+//         &__value {
+//             font-weight: 400;
+//         }
+
+//         &__state {
+//             font-size: 1.4rem;
+//             height: 24px;
+//             line-height: 1.7;
+//             line-height: 24px;
+//             padding: 0 6px;
+//             background: $color-red;
+//             color: $color-white;
+//             border-radius: 3px;
+
+//             @include mq("tablet") {
+//                 font-size: 1.6rem;
+//                 height: 26px;
+//                 line-height: 1.7;
+//                 padding: 0 9px;
+//                 margin-left: 20px;
+//             }
+
+//             @include mq("bootstrap-lg") {
+//                 font-size: 1.6rem;
+//                 margin-left: 0;
+//             }
+
+//             &--any {
+//                 background: $color-white;
+//                 color: $color-black;
+//                 border: 1px solid $color-primary;
+//                 display: flex;
+//                 align-items: center;
+//             }
+//         }
+
+//         select::-ms-expand {
+//             display: none;
+//         }
+
+//         .form-control {
+//             height: 50px;
+//             border-radius: 0;
+//             background-color: $color-white;
+//             border: solid 1px #d0d0d0;
+//             color: #ccc;
+//             font-size: 1.6rem;
+//             line-height: 1.6;
+//             font-weight: 400;
+//             position: relative;
+//             width: 100%;
+//             padding: 13px 16px;
+//             &::after {
+//                 position: absolute;
+//                 content: "";
+//                 width: 10px;
+//                 height: 10px;
+//                 background-color: #f5f5f5;
+//                 right: 0;
+//             }
+
+//             &:focus {
+//                 box-shadow: 0 0 0 1px rgba($color-black, 0.4);
+//             }
+
+//             &::placeholder {
+//                 color: #ccc;
+//             }
+
+//             &.py-25 {
+//                 margin: 25px 0;
+//             }
+//         }
+
+//         &__radio-wrapper {
+//             justify-content: space-between;
+
+//             .custom-control {
+//                 padding-left: 44px;
+
+//                 @include mq("phablet") {
+//                     padding-left: 17px;
+//                 }
+
+//                 @include mq("tablet") {
+//                     padding-left: 17px;
+//                 }
+
+//                 &:first-child {
+//                     padding-left: 21px;
+//                 }
+//             }
+
+//             .custom-control-label {
+//                 font-size: 1.6rem;
+//                 font-weight: 400;
+//                 color: $color-black;
+//                 display: block;
+
+//                 @include mq("tablet") {
+//                     font-size: 1.5rem;
+//                 }
+//                 @include mq("bootstrap-lg") {
+//                     font-size: 1.6rem;
+//                 }
+
+//                 &:before,
+//                 &:after {
+//                     left: -2rem;
+//                     top: 0.5rem;
+//                     width: 1.4rem;
+//                     height: 1.4rem;
+
+//                     @include mq("tablet") {
+//                         top: 0.2rem;
+//                     }
+//                     @include mq("bootstrap-lg") {
+//                         top: 0.5rem;
+//                     }
+//                 }
+//             }
+
+//             .custom-control-label::before {
+//                 border: 2px solid $color-primary;
+//             }
+
+//             .custom-control-input:focus:not(:checked)
+//                 ~ .custom-control-label::before {
+//                 border-color: $color-white;
+//             }
+
+//             .custom-control-input:focus ~ .custom-control-label::before {
+//                 box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.3);
+//             }
+
+//             .custom-control-input:checked ~ .custom-control-label::before {
+//                 border-color: $color-white;
+//                 background-color: $color-primary;
+//             }
+
+//             //reveal if active
+//             .reveal-if-active {
+//                 opacity: 0;
+//                 max-height: 0;
+//                 overflow: hidden;
+//                 transform: scale(0.8);
+//                 transition: 0.5s;
+//             }
+
+//             .custom-control-input#radio1:checked ~ .reveal-if-active {
+//                 opacity: 1;
+//                 max-height: 100px;
+//                 overflow: visible;
+//                 transform: scale(1);
+//                 margin-top: 10px;
+//             }
+//         }
+
+//         .custom-select {
+//             background: url("../img/arrow-down.svg") no-repeat right 0.75rem
+//                 center;
+//             background-size: 22px 22px;
+//         }
+
+//         textarea.form-control {
+//             height: 120px;
+//             resize: none;
+//             padding-top: 15px;
+//             padding-bottom: 15px;
+//         }
+
+//         select {
+//             // width: 100px;
+//             -moz-appearance: none;
+//             -webkit-appearance: none;
+//             appearance: none;
+//             cursor: pointer;
+
+//             background: url(../img/arrow-dwn.png) no-repeat right 15px center;
+//             background-size: 13px 7px;
+
+//             @include mq("tablet") {
+//                 background-size: 22px 12px;
+//             }
+//         }
+
+//         &__radio-wrapper {
+//             display: flex;
+//             flex-direction: row;
+//         }
+
+//         &__search {
+//             img {
+//                 width: 60px;
+//                 margin-left: 10px;
+//             }
+//         }
+//         &__btn-wpr {
+//             max-width: 320px;
+//             margin: 0 auto;
+//             position: relative;
+//             &::after {
+//                 position: absolute;
+//                 content: "";
+//                 width: 13px;
+//                 height: 5px;
+//                 background-image: url(../../images_new/top/arw-white.svg);
+//                 background-position: center;
+//                 background-size: contain;
+//                 background-repeat: no-repeat;
+//                 right: 30px;
+//                 top: 50%;
+//                 transform: translateY(-50%);
+//             }
+//         }
+//         &__btn {
+//             font-size: 1.6rem;
+//             font-weight: 400;
+//             line-height: 2.5;
+//             color: $color-white;
+//             background-color: #b19d7f;
+//             border-radius: 71px;
+//             max-width: 320px;
+//             width: 100%;
+//             padding: 24px 10px 27px;
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             margin: 0 auto;
+//             border: 1px solid #b19d7f;
+//             transition: all 0.3 ease;
+
+//             &:hover {
+//                 opacity: 0.7;
+//             }
+//         }
+
+//         &__info-box {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             margin: 40px 0 15px;
+//         }
+
+//         &__info-txt {
+//             font-size: 2rem;
+//             font-weight: 700;
+//             line-height: 1.4;
+//             margin-right: 10px;
+//         }
+
+//         &__process {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+
+//             background-color: #f8f4f0;
+//             padding: 18px 15px 17px;
+
+//             &-txt {
+//                 font-size: 1.6rem;
+//                 font-weight: 700;
+//                 line-height: 2;
+//                 letter-spacing: 0.05em;
+//                 margin-left: 10px;
+//             }
+//         }
+
+//         &__row {
+//             display: flex;
+//             gap: 20px;
+//         }
+
+//         &__col-lg {
+//             width: 85.96%;
+//         }
+//         &__col-sm {
+//             width: 14.035%;
+//         }
+
+//         &__privacy {
+//             padding: 10px 25px 10px 20px;
+//             border: 1px solid #ddd7cf;
+//             border-radius: 3px;
+//             margin: 20px 0;
+
+//             &-ttl {
+//                 font-size: 1.4rem;
+//                 font-weight: 700;
+//                 letter-spacing: 0.05em;
+//                 line-height: 1.7;
+//                 margin-bottom: 8px;
+//             }
+//             &-desc {
+//                 font-size: 1.2rem;
+//                 line-height: 1.8;
+//             }
+//         }
+
+//         &__agree {
+//             display: flex;
+//             justify-content: center;
+//             align-items: center;
+//             max-width: 335px;
+//             margin: 0 auto 80px;
+//             border-radius: 3px;
+//             border: 1px solid #d0d0d0;
+//             padding: 14px 5px 16px;
+//             &-label {
+//                 font-size: 1.4rem;
+//                 line-height: 1.4;
+//             }
+
+//             .custom-control-input {
+//                 border-radius: 1.5px;
+//             }
+//         }
+//     }
+
+//     .err {
+//         color: $color-red;
+//     }
+
+//     .custom-control-input {
+//         width: 18px;
+//         height: 18px;
+//         margin: 0 10px 0 0;
+//         border: 1px solid #b19d7f;
+//     }
+//     .-arw {
+//         position: relative;
+//         &::after {
+//             position: absolute;
+//             content: "";
+//             width: 60px;
+//             height: 48px;
+//             background-image: url(./../../images_new/recruit/arw.svg);
+//             background-position: center;
+//             background-size: contain;
+//             background-repeat: no-repeat;
+//             right: 0;
+//             top: 1px;
+//             z-index: 0;
+//         }
+//     }
+
+//     .-w410 {
+//         max-width: 410px;
+//         width: 100%;
+//     }
+
+//     .-search {
+//         display: flex;
+//         align-items: center;
+//         &:first-child {
+//             max-width: 340px;
+//         }
+//     }
+// }

@@ -1,0 +1,434 @@
+.flow {
+    &__wrapper {
+        padding: 60px 0 40px;
+
+        @include mq("tablet") {
+            padding: 100px 0 130px;
+        }
+
+        &-sec {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            flex-direction: column;
+            margin-bottom: 60px;
+
+            @include mq("tablet") {
+                margin-bottom: 100px;
+                flex-direction: row;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-rgt {
+            width: 100%;
+            max-width: 950px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @include mq("tablet") {
+                border-top: 2px solid $color-org;
+                margin-bottom: 0;
+                margin-top: 6px;
+            }
+        }
+    }
+
+    &__men {
+        padding-top: 30px;
+
+        @include mq("tablet") {
+            padding-top: 80px;
+        }
+    }
+
+    &__ttl {
+        font-family: $font-secondary;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        // line-height   : calc(59/25);
+        text-align: center;
+        color: $color-org;
+        margin-bottom: 16px;
+
+        @include mq("tablet") {
+            margin-bottom: 30px;
+            font-size: 4rem;
+            line-height: calc(59 / 40);
+            letter-spacing: 0.04em;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-link {
+            width: 100%;
+            max-width: 450px;
+            background-color: $color-white;
+            border: 1px solid $color-lgt-brown;
+            border-radius: 5px;
+            padding: 0 20px;
+            height: 128px;
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.06);
+            text-decoration: unset;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+
+            @include mq("tablet") {
+                width: calc(100% / 2 - 25px);
+                padding: 0px 20px 0 30px;
+                max-width: 100%;
+            }
+
+            &:hover {
+                opacity: 0.8;
+
+                &::after {
+                    transform: translateY(5px);
+                }
+            }
+
+            &::after {
+                display: inline-block;
+                content: "";
+                width: 39px;
+                height: 39px;
+                background-image: url(./../../images_new/common/arw-dwn.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                rotate: 270deg;
+                transition: all 0.3s ease;
+
+                @include mq("tablet") {
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+
+                &::after {
+                    transform: translateY(5px);
+                }
+            }
+        }
+
+        &-pre {
+            font-family: $font-mincho;
+            font-size: 1.4rem;
+            line-height: 1.5;
+            font-weight: 400;
+            color: $color-black;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-sec {
+            font-family: $font-mincho;
+            font-size: 2rem;
+            line-height: 1.46;
+            letter-spacing: 0.05em;
+            color: $color-primary;
+
+            @include mq("tablet") {
+                font-size: 2.4rem;
+            }
+        }
+    }
+
+    &-sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__subttl {
+        font-family: $font-secondary;
+        font-size: 3rem;
+        // line-height   : calc(59/30);
+        letter-spacing: 0.02em;
+        font-weight: 400;
+        color: $color-black;
+        flex-grow: 1;
+        text-align: center;
+
+        @include mq("tablet") {
+            text-align: unset;
+            font-size: 5rem;
+            line-height: 1;
+        }
+
+        span {
+            font-family: $font-primary;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            display: block;
+
+            @include mq("tablet") {
+                font-size: 2.1rem;
+            }
+        }
+    }
+
+    &__box {
+        padding: 13px 0;
+        border-bottom: 1px solid $color-lgt-brown;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            padding: 20px 0;
+            flex-direction: row;
+            align-items: baseline;
+        }
+
+        &.-fdc {
+            flex-direction: column;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        &.mtminus {
+            margin-top: -20px;
+
+            @include mq("tablet") {
+                margin-top: -35px;
+            }
+        }
+    }
+
+    &__h4 {
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        letter-spacing: 0.05em;
+        line-height: calc(22 / 16);
+        font-weight: 600;
+        color: $color-black;
+        flex-grow: 1;
+        display: flex;
+        align-items: baseline;
+        color: #333;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+            line-height: calc(26 / 18);
+        }
+
+        &::before {
+            content: "";
+            width: 3px;
+            height: 16px;
+            border-radius: 1px;
+            background-color: $color-primary;
+            display: inline-block;
+            margin-right: 13px;
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        font-family: $font-mincho;
+        font-size: 2.4rem;
+        line-height: calc(42 / 24);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: $color-primary;
+        margin-left: 18px;
+
+        @include mq("tablet") {
+            flex: 0 0 699px;
+            font-size: 2.5rem;
+            line-height: calc(42 / 25);
+            margin-left: 0;
+        }
+
+        &-price {
+            font-size: 1.2rem;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__note {
+        font-family: $font-primary;
+        font-size: 1.2rem;
+        line-height: calc(18 / 12);
+        color: $color-black;
+        font-weight: 400;
+
+        @include mq("tablet") {
+            font-size: 1.4rem;
+            line-height: calc(24 / 14);
+            letter-spacing: 0.05em;
+        }
+
+        &.bold {
+            font-size: 1.4rem !important;
+            margin-bottom: 10px;
+            @include mq("tablet") {
+                font-size: 1.6rem !important;
+                margin-bottom: 0;
+            }
+        }
+
+        &.fs16 {
+            font-size: 1.4rem;
+            line-height: calc(24 / 14);
+            letter-spacing: 0.05em;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+                line-height: calc(30 / 16);
+            }
+        }
+
+        &-sm {
+            font-size: 1rem;
+            line-height: 1.5;
+            font-family: $font-primary;
+            font-weight: 400;
+
+            @include mq("tablet") {
+                font-size: 1.2rem;
+                line-height: calc(20 / 12);
+            }
+        }
+
+        &.bold {
+            font-weight: 700;
+        }
+
+        &.req {
+            font-size: 1rem;
+            @include mq("tablet") {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__list {
+        padding: 35px 20px 40px;
+        background-color: $color-lgt-brown2;
+        border-top: 1px solid $color-org;
+        border-bottom: 1px solid $color-org;
+        position: relative;
+        margin-top: 15px;
+
+        @include mq("tablet") {
+            padding: 55px 60px 55px;
+            margin-top: 0;
+        }
+
+        &::before {
+            content: "";
+            background-image: url("../../images_new/icons/reg-icon1.svg");
+            width: 21px;
+            height: 18px;
+            display: inline-block;
+            position: absolute;
+            top: 6%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            left: 49.2%;
+            transform: translate(-50%, -50%);
+
+            @include mq("tablet") {
+                top: 12%;
+                width: 26px;
+                height: 22px;
+            }
+        }
+
+        ul {
+            columns: 1;
+            margin-left: 15px;
+
+            @include mq("tablet") {
+                columns: 2;
+                column-gap: 5px;
+                margin-left: 15px;
+            }
+
+            li {
+                font-size: 1.4rem;
+                line-height: 1.42;
+                font-weight: 400;
+                font-family: $font-primary;
+                list-style: decimal;
+                padding-left: 5px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                @include mq("tablet") {
+                    font-size: 1.6rem;
+                    line-height: 2;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        h4 {
+            font-family: $font-primary;
+            font-size: 1.6rem;
+            line-height: calc(30 / 16);
+            letter-spacing: 0.05em;
+            color: $color-primary;
+            text-align: start;
+            margin: 6px 20px 12px;
+            font-weight: 700;
+            margin-left: 0px;
+
+            @include mq("tablet") {
+                text-align: center;
+                margin: 6px auto 12px;
+            }
+        }
+
+        &.-gap {
+            ul {
+                column-gap: 68px;
+            }
+        }
+
+        &.pre02 {
+            ul {
+                column-gap: 69px;
+            }
+        }
+    }
+}

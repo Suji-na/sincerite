@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <g id="btn" transform="translate(-326 -1818)">
+    <rect id="Rectangle_573" data-name="Rectangle 573" width="28" height="28" transform="translate(326 1818)" fill="none"/>
+    <path id="plus" d="M28,9.381H0v1.4H28Z" transform="translate(326 1821.919)" fill="#333"/>
+    <path id="plus-2" data-name="plus" d="M1.4,0H0V1.4H1.4Z" transform="translate(340.7 1831.301) rotate(90)" fill="#333"/>
+  </g>
+</svg>

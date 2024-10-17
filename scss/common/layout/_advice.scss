@@ -1,0 +1,23 @@
+.advice {
+    padding : 0px 0 80px;
+    overflow: hidden;
+
+    @include mq('tablet') {
+        padding: 0px 0 80px;
+    }
+
+    &__wrapper {
+        transition: all 0.3s ease;
+        display   : block;
+        max-width : 700px;
+        width     : 100%;
+        margin    : 0 auto;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+    }
+}
+
+

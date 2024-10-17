@@ -1,0 +1,332 @@
+.plan {
+    padding-top     : 80px;
+    background-color: #f9f8f7;
+
+    @include mq("tablet") {
+        background-color: $color-white;
+        padding-top     : 60px;
+    }
+
+    &__row {
+        display       : flex;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+        }
+
+        @include mq("desktop") {
+            width      : calc(50vw + 640px);
+            margin-left: auto;
+        }
+
+        &.-wmen {
+            margin-right  : auto;
+            margin-left   : 0;
+            margin-top    : 80px;
+            flex-direction: column-reverse;
+
+            @include mq("tablet") {
+                flex-direction: row;
+                margin-top    : 133px;
+            }
+        }
+    }
+
+    &__box {
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    &__col-lg {
+        @include mq("tablet") {
+            width      : 58%;
+            max-width  : 730px;
+            // position: relative;
+        }
+
+        @include mq("desktop-xlg") {
+            position: relative;
+        }
+
+        &::after {
+            @include mq("tablet") {
+                position           : absolute;
+                content            : "";
+                width              : 470px;
+                height             : 264px;
+                background-image   : url(../../images_new/top/plan/plan-men-02.jpg);
+                background-position: center;
+                background-size    : contain;
+                background-repeat  : no-repeat;
+                left               : 0;
+                bottom             : 0;
+
+                @include mq("tablet") {
+                    opacity: 0.8;
+                }
+            }
+
+            @include mq("desktop-xlg") {
+                left: -299px;
+            }
+        }
+
+        &.-wmen {
+            &::after {
+                @include mq("tablet") {
+                    background-image: url(../../images_new/top/plan/plan-women-02.jpg);
+                    right           : 0;
+                    left            : initial;
+                }
+
+                @include mq("desktop-xlg") {
+                    right: -296px;
+                }
+            }
+        }
+    }
+
+    &__fig {
+        position     : relative;
+        margin-bottom: -20px;
+
+        @include mq("tablet") {
+            margin-bottom: 0;
+        }
+
+        img {
+            max-width: 270px;
+            display  : block;
+
+            @include mq("tablet") {
+                width        : 100%;
+                max-width    : 100%;
+                opacity      : 0.8;
+                // max-height: 533px;
+            }
+        }
+
+        &.-rt {
+            img {
+                margin-left: auto;
+
+                @include mq("tablet") {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        &-capt {
+            font-size     : 5.6rem;
+            text-align    : right;
+            letter-spacing: 0.02em;
+            line-height   : 0.86;
+            font-family   : $font-secondary;
+            position      : absolute;
+            right         : 21px;
+            bottom        : 50px;
+            z-index       : 1;
+            top           : -1px;
+
+            @include mq("tablet") {
+                font-size : 15rem;
+                text-align: left;
+                right     : 52px;
+                bottom    : -175px;
+                top       : unset;
+            }
+
+            &.-wmen {
+                color: $color-pink;
+
+                right     : 0;
+                left      : 20px;
+                text-align: left;
+
+                @include mq("tablet") {
+                    // text-align: right;
+                    left: 50px;
+                }
+            }
+        }
+    }
+
+    &__col-sm {
+        // width: 42%;
+        background-color: $color-black;
+        padding         : 65px 20px 60px 20px;
+
+        @include mq("tablet") {
+            // width: calc(100% - 732px);
+            flex-grow: 1;
+            padding  : 80px 0 85px 77px;
+        }
+
+        &.-pnk {
+            background-color: $color-pink;
+            padding         : 56px 20px 60px 20px;
+            display         : flex;
+            justify-content : flex-end;
+
+            @include mq("tablet") {
+                padding: 54px 115px 54px 77px;
+            }
+        }
+
+        .btn-primary {
+            margin: 30px auto 0;
+
+            @include mq("tablet") {
+                margin: 35px 0 0 74px;
+            }
+
+            &:after {
+                right: 16px;
+
+                @include mq("tablet") {
+                    right: 24px;
+                }
+            }
+        }
+    }
+
+    &__pnk-box {
+        width: 100%;
+
+        @include mq("tablet") {
+            width: initial;
+        }
+    }
+
+    &__ttl-sm {
+        font-size       : 1.4rem;
+        letter-spacing  : 0.05em;
+        background-color: $color-white;
+        display         : inline-block;
+        clip-path       : polygon(5% 0, 100% 0%, 100% 55%, 95% 100%, 0 100%, 0% 45%);
+        padding         : 7.5px 12px;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+            padding  : 7px 19px;
+        }
+
+        &.-pnk {
+            color: $color-pink;
+        }
+    }
+
+    &__desc {
+        font-size  : 1.8rem;
+        line-height: 1.6;
+        color      : $color-white;
+        font-family: $font-mincho;
+        padding    : 20px 0;
+
+        @include mq("tablet") {
+            font-size: 2rem;
+            padding  : 37px 0 40px;
+        }
+    }
+
+    &__content {
+        padding-left : 50px;
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        @include mq("tablet") {
+            padding-left: 74px;
+        }
+
+        &-desc {
+            font-size     : 1.4rem;
+            line-height   : 1.64;
+            font-weight   : 500;
+            letter-spacing: 0.05em;
+            color         : $color-primary;
+            position      : relative;
+
+            @include mq("tablet") {
+                font-size  : 1.6rem;
+                line-height: 1.4;
+            }
+
+            &::before {
+                position        : absolute;
+                content         : "";
+                width           : 40px;
+                height          : 1px;
+                background-color: $color-org02;
+                opacity         : 0.5;
+                left            : -50px;
+                top             : 10px;
+
+                @include mq("tablet") {
+                    width: 60px;
+                    left : -74px;
+                }
+            }
+
+            &.-pnk {
+                color: $color-white;
+
+                &::before {
+                    background-color: $color-white;
+                }
+            }
+        }
+
+        &-ttl-wpr {
+            display       : inline-flex;
+            flex-direction: column;
+            align-items   : flex-start;
+
+            .plan__content-ttl {
+                &:last-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &-ttl {
+            font-size     : 2rem;
+            line-height   : 1.16;
+            font-family   : $font-mincho;
+            color         : $color-primary;
+            display       : inline-block;
+            padding-bottom: 12px;
+            border-bottom : 1px solid rgba(193, 167, 96, 50%);
+            position      : relative;
+
+            @include mq("tablet") {
+                font-size     : 3rem;
+                padding-bottom: 14px;
+            }
+
+            &::after {
+                position        : absolute;
+                content         : "";
+                width           : 100%;
+                height          : 1px;
+                bottom          : 3px;
+                left            : 0;
+                background-color: $color-primary;
+                opacity         : 0.5;
+            }
+
+            &.-pnk {
+                color        : $color-white;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+                &::after {
+                    background-color: $color-white;
+                }
+            }
+        }
+    }
+}

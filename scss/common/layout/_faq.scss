@@ -1,0 +1,112 @@
+.faq-page {
+    background-color: $color-white;
+
+    .intro-nav__nav {
+        margin-top    : 0;
+        flex-wrap     : wrap;
+        flex-direction: row;
+    }
+
+    .intro-nav__nav-link {
+        width         : calc(100% / 2);
+        margin        : 0 auto;
+        flex-direction: row;
+        flex-wrap     : wrap;
+
+        &.-mid {
+            &::after {
+                position        : absolute;
+                content         : "";
+                width           : 1px;
+                height          : 45px;
+                background-color: #ddd7cf;
+                top             : 50%;
+                left            : 0;
+                transform       : translate(-50%, -50%);
+
+                @include mq("tablet") {
+                    top      : 0;
+                    right    : 0;
+                    left     : unset;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &:nth-child(3) {
+                &::after {
+                    display: block;
+                    left   : unset;
+                    right  : 0;
+                }
+            }
+        }
+
+
+
+
+        @include mq("tablet") {
+            width: calc(100%/4);
+        }
+
+        span {
+            gap        : 31px;
+            align-items: center;
+        }
+
+
+    }
+
+    .intro-nav__nav-link:nth-child(3) {
+        border-bottom: 1px solid #DDD7CF;
+
+        @include mq("tablet") {
+            border-bottom: unset;
+        }
+
+        &::before {
+            content: none;
+        }
+    }
+
+    .faq__text {
+        flex-basis: 93%;
+    }
+
+    .intro-nav {
+        padding-bottom: 0;
+
+    }
+
+    .intro-nav__nav {
+        padding-bottom: 30px;
+        margin        : 0 -20px;
+
+        @include mq("tablet") {
+            margin: 0 auto;
+        }
+    }
+
+    &__ttl {
+        font-size  : 4rem;
+        text-align : center;
+        line-height: 1.2;
+        font-weight: 600;
+        padding    : 100px 0 12px;
+        font-weight: 400;
+    }
+
+    &__color {
+        background-color: #f8f4f0;
+        padding-bottom  : 120px;
+
+        &.-wh {
+            background-color: #f9f8f7;
+        }
+    }
+
+    .btn__home {
+        @include mq("tablet") {
+            margin: 180px 0;
+        }
+    }
+}

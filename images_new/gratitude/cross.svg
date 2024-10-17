@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <g id="Component_-_Plus" data-name="Component - Plus" transform="translate(-5.188 -5)">
+    <g id="Ellipse_226" data-name="Ellipse 226" transform="translate(5.188 5)" fill="#fff" stroke="#ddd7cf" stroke-width="1">
+      <circle cx="24" cy="24" r="24" stroke="none"/>
+      <circle cx="24" cy="24" r="23.5" fill="none"/>
+    </g>
+    <g id="Icon_-_Add" data-name="Icon - Add" transform="translate(29.597 11.424) rotate(45)">
+      <path id="Union_1" data-name="Union 1" d="M12.044,25.7V13.655H0V12.048H12.044V0h1.608V12.048H25.7v1.607H13.652V25.7Z" transform="translate(0 0)" fill="#707070"/>
+    </g>
+  </g>
+</svg>

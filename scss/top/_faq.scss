@@ -1,0 +1,206 @@
+.faq {
+    background-color: #F9F8F7;
+    padding-top: 80px;
+    padding-bottom: 30px;
+
+    &.-bg {
+        background-color: $color-cream;
+        // background-color: $color-lgt-brown;
+    }
+
+    @include mq("tablet") {
+        padding: 0 0 1px;
+    }
+
+    & .heading-primary {
+        padding-bottom: 30px;
+
+        @include mq("tablet") {
+            padding-bottom: 73px;
+            padding-top: 80px;
+        }
+    }
+
+    &__question {
+        margin-bottom: 10px;
+
+        &:first-child {
+            @include mq("tablet") {
+                padding-top: 18px;
+            }
+        }
+
+        // & .faq__icon {
+        //     font-size: 1.6rem;
+
+        //     @include mq("tablet") {
+        //         font-size: 2rem;
+        //     }
+        // }
+    }
+
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+        font-size: 2.2rem;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        font-family: $font-secondary;
+        line-height: 1;
+        color: $color-black;
+        text-align: center;
+        margin-right: 14px;
+
+        @include mq("tablet") {
+            margin-right: 27px;
+            font-size: 3.2rem;
+        }
+    }
+
+    &__heading-wpr {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        background-color: $color-white;
+        padding: 10px 14px 21px 16px;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 2px;
+
+        @include mq("tablet") {
+            padding: 16px 30px 16px 39px;
+            align-items: center;
+        }
+
+        &>span {
+            position: relative;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            flex: 0 0 15px;
+            margin-top: 6px;
+
+            @include mq('tablet') {
+                width: 28px;
+                height: 28px;
+                flex: 0 0 28px;
+                margin-top: 0;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                background-color: #333;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                transform-origin: center;
+                transition: all 0.3s ease;
+            }
+
+            &::before {
+                width: 15px;
+                height: 1px;
+
+                @include mq('tablet') {
+                    width: 28px;
+                }
+            }
+
+            &::after {
+                width: 1px;
+                height: 15px;
+
+                @include mq('tablet') {
+                    height: 28px;
+                }
+            }
+        }
+
+        &.open {
+            span {
+                &::before {
+                    transform: translate(-50%, -50%);
+                }
+
+                &::after {
+                    opacity: 0;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    &__heading {
+        display: flex;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: $color-black;
+        margin: 0;
+        align-items: center;
+
+        @include mq("tablet") {
+            align-items: center;
+            // font-size: 2rem;
+        }
+    }
+
+    &__answer {
+        &-wpr {
+            background-color: $color-white;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        display : flex;
+        align-items : center;
+        transition : all 0.2s ease;
+        margin-bottom: 0;
+        padding : 15px 42px 15px 17px;
+
+        @include mq("tablet") {
+            padding: 30px 30px 34px 39px;
+        }
+
+        &.is-shown {
+            padding: 11px 42px 15px 17px;
+            max-height: 1000px;
+
+            @include mq("tablet") {
+                padding: 18px 30px 21px 39px;
+            }
+        }
+
+        // & .faq__icon {
+        //     font-size: 1.4rem;
+
+        //     @include mq("tablet") {
+        //         font-size: 1.6rem;
+        //     }
+        // }
+    }
+
+    &__text {
+        flex-basis: 94%;
+        font-size: 1.4rem;
+        color: $color-black;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+
+        span {
+            font-weight: 700;
+            color: #C1A760;
+        }
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+}

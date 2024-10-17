@@ -1,0 +1,273 @@
+.income {
+    background: radial-gradient(0, rgba(240, 228, 206, 1) 0%, rgba(221, 179, 102, 1) 6%, rgba(178, 135, 58, 1) 50%, rgba(124, 92, 36, 1) 100%);
+
+    @include mq("tablet") {
+        padding-top  : 130px;
+        background   : none;
+        // margin-bottom: 80px;
+    }
+
+    & .container {
+        overflow: visible;
+    }
+
+    &__wrapper {
+        filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.28));
+
+    }
+
+    &__cnt {
+        @include mq("tablet", "max") {
+            background: radial-gradient(ellipse at bottom left, rgba(240, 228, 206, 1) 0%, rgba(221, 179, 102, 1) 14%, rgba(178, 135, 58, 1) 48.8%, rgba(124, 92, 36, 1) 87%);
+        }
+    }
+
+    &__box {
+
+        @include mq("tablet") {
+            clip-path : polygon(2% 0, 100% 0, 100% 78%, 98% 100%, 0 100%, 0 25%);
+            background: radial-gradient(ellipse at bottom left, rgba(240, 228, 206, 1) 0%, rgba(221, 179, 102, 1) 14%, rgba(178, 135, 58, 1) 48.8%, rgba(124, 92, 36, 1) 87%);
+        }
+    }
+
+    &__tittle {
+        font-size       : 2rem;
+        line-height     : 2.1;
+        letter-spacing  : 0.02em;
+        text-align      : center;
+        font-family     : $font-secondary;
+        background-color: $color-white;
+        display         : block;
+        width           : 165px;
+        padding         : 8px;
+        margin          : 0 auto;
+        display         : none;
+
+        @include mq("tablet", "max") {
+            display        : block;
+            height         : 42px;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            color          : $color-org02;
+        }
+    }
+
+    &__inner {
+        display       : flex;
+        flex-direction: column;
+        padding       : 63px 0 41px;
+        position      : relative;
+
+        &:before {
+            position           : absolute;
+            content            : "";
+            width              : 22px;
+            height             : 26px;
+            background-image   : url(./../../images_new/top/popular/flower.svg);
+            background-position: center;
+            background-size    : contain;
+            background-repeat  : no-repeat;
+            top                : 22px;
+            left               : 50%;
+            transform          : translateX(-50%);
+
+            @include mq("tablet") {
+                top: unset;
+            }
+        }
+
+        @include mq("tablet") {
+            flex-direction: row;
+            padding       : 10px 0 20px;
+
+            &::before,
+            &:after {
+                position           : absolute;
+                content            : "";
+                width              : 22px;
+                height             : 26px;
+                background-image   : url(./../../images_new/top/popular/flower.svg);
+                background-position: center;
+                background-size    : contain;
+                background-repeat  : no-repeat;
+                bottom             : 80px;
+            }
+
+            &::before {
+                left: 40px;
+            }
+
+            &::after {
+                right: 40px;
+            }
+        }
+    }
+
+    &__left {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+
+        @include mq("tablet") {
+            width        : 50%;
+            padding-right: 43px;
+            align-items  : flex-end;
+        }
+    }
+
+    &__right {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+
+        @include mq("tablet") {
+            width          : 50%;
+            justify-content: unset;
+        }
+    }
+
+    &__date-wpr {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        margin-bottom : 16px;
+        position      : relative;
+
+        &::before,
+        &:after {
+            position        : absolute;
+            content         : "";
+            width           : 21px;
+            height          : 2px;
+            background-color: $color-white;
+            top             : 50%;
+            transform       : translateY(-50%);
+        }
+
+        &::before {
+            left: -30px;
+        }
+
+        &::after {
+            right: -30px;
+        }
+
+        @include mq("tablet") {
+            flex-direction: row;
+
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &__time {
+        font-size     : 1.9rem;
+        font-weight   : 600;
+        color         : $color-white;
+        letter-spacing: 0.01em;
+        position      : relative;
+
+        @include mq("tablet") {
+            font-size   : 2.2rem;
+            margin-right: 20px;
+
+            &::after {
+                position        : absolute;
+                content         : "";
+                width           : 1px;
+                height          : 32px;
+                background-color: #fff;
+                right           : -12px;
+                top             : -3px;
+                transform       : rotate(30deg);
+            }
+        }
+    }
+
+    &__date {
+        font-size  : 1.9rem;
+        font-weight: 700;
+        color      : $color-white;
+        margin-top : 10px;
+
+        @include mq("tablet") {
+            font-size : 1.6rem;
+            margin-top: 0;
+        }
+
+        em {
+            font-family : $font-tertiary;
+            margin-right: 5px;
+        }
+    }
+
+    &__ttl {
+        font-size    : 2.7rem;
+        font-weight  : 400;
+        line-height  : 1;
+        font-family  : $font-mincho;
+        color        : $color-white;
+        padding      : 11px 0;
+        border-top   : 1px solid $color-white;
+        border-bottom: 1px solid $color-white;
+        display      : inline-block;
+
+        @include mq("tablet") {
+            font-size: 3.6rem;
+            padding  : 15px 0;
+        }
+    }
+
+    &__price {
+        font-size     : 9rem;
+        font-weight   : 400;
+        letter-spacing: -0.03em;
+        font-family   : $font-mincho;
+        color         : $color-white;
+        border-bottom : 1px solid $color-white;
+        padding-bottom: 10px;
+        line-height   : 1.1;
+        display       : flex;
+        align-items   : flex-end;
+
+        span {
+            font-size     : 3.6rem;
+            line-height   : 1.1;
+            writing-mode  : vertical-lr;
+            letter-spacing: 0.039em;
+            margin-left   : 7px;
+            font-weight   : 700;
+            padding-bottom: 4px;
+
+            @include mq("tablet") {
+                font-size     : 5.2rem;
+                writing-mode  : horizontal-tb;
+                letter-spacing: 0;
+                margin-left   : 0;
+                padding-bottom: 0;
+            }
+        }
+
+        @include mq("tablet") {
+            font-size     : 13.2rem;
+            border-bottom : 0;
+            padding-bottom: 0;
+            line-height   : unset;
+            display       : initial;
+        }
+    }
+
+    &-img {
+        width  : 100%;
+        display: block;
+        margin : 0 auto;
+
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+}

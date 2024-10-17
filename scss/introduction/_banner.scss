@@ -1,0 +1,16 @@
+.intro {
+    .banner {
+        &__col {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &:first-of-type {
+                background-image: url(../../images_new/introduction/banner/banner-img1.jpg)
+            }
+            &:last-of-type {
+                background-image: url(../../images_new/introduction/banner/banner-img2.jpg)
+            }
+        }
+    }
+}

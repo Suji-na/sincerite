@@ -1,0 +1,966 @@
+@@include('@@webRoot/parts/header.html')
+
+<div class="title">
+    <div class="container">
+        <div class="title__wrapper">
+            <h1><span>簡単<span>2</span>分</span>未来のセレブパートナー診断</h1>
+        </div>
+    </div>
+</div>
+
+<main class="main" id="main">
+    <div class="form__steps">
+        <div class="container">
+            <div class="form__steps-wrapper">
+                <div class="form__steps-box active step1">
+                    <div class="form__steps-box-no">
+                        <span>STEP</span>
+                        <span>01</span>
+                    </div>
+                </div>
+
+                <div class="form__steps-box step2">
+                    <div class="form__steps-box-no">
+                        <span>STEP</span>
+                        <span>02</span>
+                    </div>
+
+                    <div class="form__steps-box-sub">
+                        <span class=""></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="form__steps-box step3">
+                    <div class="form__steps-box-no">
+                        <span>STEP</span>
+                        <span>03</span>
+                    </div>
+
+                    <div class="form__steps-box-sub">
+                        <span class=""></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="form__steps-box step4">
+                    <div class="form__steps-box-no">
+                        <span>STEP</span>
+                        <span>04</span>
+                    </div>
+
+                    <div class="form__steps-box-sub">
+                        <span class=""></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="form__steps-box-end">
+                    <span>完了</span>
+                    <!-- <div class="form__steps-box-end">
+                    </div> -->
+                    
+                </div>
+            </div>
+
+            <div class="form__steps-contact hide">
+                <span>完了</span>
+                <p>診断に必要な回答は終了です。ご入力お疲れ様でした！</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form__steps-desc container">
+        <div class="form__steps-desc-text step1">
+            <span>STEP 01</span>
+            <p>プロフィール入力</p>
+        </div>
+        <div class="form__steps-desc-text hide step2-01">
+            <span>STEP 02</span>
+            <p>趣味・好み<span>(1/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step2-02">
+            <span>STEP 02</span>
+            <p>趣味・好み<span>(2/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step2-03">
+            <span>STEP 02</span>
+            <p>趣味・好み<span>(3/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step2-04">
+            <span>STEP 02</span>
+            <p>趣味・好み<span>(4/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step3-01">
+            <span>STEP 03</span>
+            <p>行動診断<span>(1/5問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step3-02">
+            <span>STEP 03</span>
+            <p>行動診断<span>(2/5問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step3-03">
+            <span>STEP 03</span>
+            <p>行動診断<span>(3/5問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step3-04">
+            <span>STEP 03</span>
+            <p>行動診断<span>(4/5問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step3-05">
+            <span>STEP 03</span>
+            <p>行動診断<span>(5/5問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step4-01">
+            <span>STEP 04</span>
+            <p>2択診断<span>(1/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step4-02">
+            <span>STEP 04</span>
+            <p>2択診断<span>(2/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step4-03">
+            <span>STEP 04</span>
+            <p>2択診断<span>(3/4問)</span></p>
+        </div>
+        <div class="form__steps-desc-text hide step4-04">
+            <span>STEP 04</span>
+            <p>2択診断<span>(4/4問)</span></p>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="container">
+            <div class="question__form">
+                <form action="@@webRoot/partnertest-complete/" method="">
+                    <div class="question__form-ques-wrapper">
+                        <div class="question__form-area active" id="step1">
+                            <div class="question__form-ques -sm">
+                                <div class="question__row">
+                                    <label for="name" class="question__row-label">
+                                        <p>お名前(ニックネーム可)</p>
+        
+                                        <div class="question__row-label-publish">
+                                            <span>公開されません</span>
+                                        </div>
+                                    </label>
+                                    <div class="question__row-text">
+                                        <input type="text" name="name" id="name" placeholder="ヤマダタロウ" required>
+                                    </div>
+        
+                                    <!-- <p class="note">※カタカナでご入力ください</p> -->
+                                </div>
+        
+                                <div class="question__row">
+                                    <label class="question__row-label">
+                                        <p>あなたの年齢層</p>
+        
+                                        <div class="question__row-label-publish">
+                                            <span>公開されません</span>
+                                        </div>
+                                    </label>
+        
+                                    <span class="wpcf7-form-control-wrap" data-name="a01_01">
+                                        <span class="wpcf7-form-control wpcf7-radio">
+                                            <span class="wpcf7-list-item">
+                                                <label>
+                                                    <input type="radio" name="a01_01" value="20〜29歳" tabindex="" wfd-id="id1" checked>
+                                                    <span class="wpcf7-list-item-label">20〜29歳</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                        <!--/ NO.01 -->
+        
+                                        <span class="wpcf7-form-control wpcf7-radio">
+                                            <span class="wpcf7-list-item">
+                                                <label>
+                                                    <input type="radio" name="a01_01" value="30〜34歳" tabindex="" wfd-id="id2">
+                                                    <span class="wpcf7-list-item-label">30〜34歳</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                        <!--/ NO.02 -->
+        
+                                        <span class="wpcf7-form-control wpcf7-radio">
+                                            <span class="wpcf7-list-item">
+                                                <label>
+                                                    <input type="radio" name="a01_01" value="35〜39歳" tabindex="" wfd-id="id3">
+                                                    <span class="wpcf7-list-item-label">35〜39歳</span>
+                                                </label>
+                                            </span>
+                                        </span>
+        
+                                        <span class="wpcf7-form-control wpcf7-radio">
+                                            <span class="wpcf7-list-item">
+                                                <label>
+                                                    <input type="radio" name="a01_01" value="40〜42歳" tabindex="" wfd-id="id4">
+                                                    <span class="wpcf7-list-item-label">40〜42歳</span>
+                                                </label>
+                                            </span>
+                                        </span>
+                                    </span>
+        
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" disabled class="question__form-btn-next" data-next="step2-01" value="次のステップへ進む">次のステップへ進む</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step2-01">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q1. 今まで好きになった異性のタイプで多いのは？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-2-01.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a02_01">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_01" value="年上" tabindex="" wfd-id="id5">
+                                                        <span class="wpcf7-list-item-label">年上</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_01" value="年下" tabindex="" wfd-id="id6">
+                                                        <span class="wpcf7-list-item-label">年下</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_01" value="同い年" tabindex="" wfd-id="id7">
+                                                        <span class="wpcf7-list-item-label">同い年</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+            
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_01" value="わからない・ばらばら" tabindex="" wfd-id="id8">
+                                                        <span class="wpcf7-list-item-label">わからない・ばらばら</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step1" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step2-02" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+                        <div class="question__form-area hide" id="step2-02">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q2. あなたの生活の中で一番優先順位が高いのは？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-2-02.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a02_02">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="恋人" tabindex="" wfd-id="id9">
+                                                        <span class="wpcf7-list-item-label">恋人</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="自分" tabindex="" wfd-id="id10">
+                                                        <span class="wpcf7-list-item-label">自分</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="仕事" tabindex="" wfd-id="id11">
+                                                        <span class="wpcf7-list-item-label">仕事</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="友達" tabindex="" wfd-id="id12">
+                                                        <span class="wpcf7-list-item-label">友達</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="家族" tabindex="" wfd-id="id13">
+                                                        <span class="wpcf7-list-item-label">家族</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_02" value="ペット" tabindex="" wfd-id="id14">
+                                                        <span class="wpcf7-list-item-label">ペット</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step2-01" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step2-03" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+                        <div class="question__form-area hide" id="step2-03">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q3. あなたの趣味はどれが一番近いですか？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-2-03.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a02_03">
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_03" value="絵を描く・写真を撮る" tabindex="" wfd-id="id15">
+                                                        <span class="wpcf7-list-item-label">絵を描く・<br>写真を撮る</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_03" value="読書・映画鑑賞" tabindex="" wfd-id="id16">
+                                                        <span class="wpcf7-list-item-label">読書・<br>映画鑑賞</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_03" value="音楽・楽器・カラオケ" tabindex="" wfd-id="id17">
+                                                        <span class="wpcf7-list-item-label">音楽・楽器・カラオケ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+            
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_03" value="スポーツ・アウトドア" tabindex="" wfd-id="id18">
+                                                        <span class="wpcf7-list-item-label">スポーツ・<br>アウトドア</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+
+                                            <span class="wpcf7-form-control wpcf7-radio -al-lft">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_03" value="特になし" tabindex="" wfd-id="id19">
+                                                        <span class="wpcf7-list-item-label">特になし</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step2-02" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step2-04" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+                        <div class="question__form-area hide" id="step2-04">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q4. あなたが最も頼れると思うのは？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-2-04.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a02_04">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_04" value="自分自身" tabindex="" wfd-id="id20">
+                                                        <span class="wpcf7-list-item-label">自分自身</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_04" value="家族・親族" tabindex="" wfd-id="id21">
+                                                        <span class="wpcf7-list-item-label">家族・親族</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_04" value="お金" tabindex="" wfd-id="id22">
+                                                        <span class="wpcf7-list-item-label">お金</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_04" value="結婚相手" tabindex="" wfd-id="id23">
+                                                        <span class="wpcf7-list-item-label">結婚相手</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a02_04" value="友達" tabindex="" wfd-id="id24">
+                                                        <span class="wpcf7-list-item-label">友達</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step2-03" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step3-01" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <!-- STEP3 -->
+                        <div class="question__form-area hide" id="step3-01">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q1. 写真に写るときはどんな表情をしますか？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-3-01.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row w-lg">
+                                        <span class="wpcf7-form-control-wrap" data-name="a03_01">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_01" value="目をつぶるリスク覚悟で自然体" tabindex="" wfd-id="id25">
+                                                        <span class="wpcf7-list-item-label">目をつぶるリスク覚悟で自然体</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_01" value="変顔したりおどけたりする" tabindex="" wfd-id="id26">
+                                                        <span class="wpcf7-list-item-label">変顔したりおどけたりする</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_01" value="決め顔でいつも同じ顔で写っている" tabindex="" wfd-id="id27">
+                                                        <span class="wpcf7-list-item-label">決め顔でいつも同じ顔で写っている</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step2-04" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step3-02" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step3-02">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q2. 恋人の携帯、あなたはチェックする？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-3-02.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row w-lg">
+                                        <span class="wpcf7-form-control-wrap" data-name="a03_02">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_02" value="気にならないのでしない" tabindex="" wfd-id="id28">
+                                                        <span class="wpcf7-list-item-label">気にならないのでしない</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_02" value="堂々とチェックする" tabindex="" wfd-id="id29">
+                                                        <span class="wpcf7-list-item-label">堂々とチェックする</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_02" value="こっそりとチェックする" tabindex="" wfd-id="id30">
+                                                        <span class="wpcf7-list-item-label">こっそりとチェックする</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.03 -->
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_02" value="気になるけどチェックしない" tabindex="" wfd-id="id31">
+                                                        <span class="wpcf7-list-item-label">気になるけどチェックしない</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.04 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step3-01" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step3-03" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step3-03">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q3. 髪を切ってイメチェンしたところ、周りから賛否両論の声が…どうしますか？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-3-03.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row w-lg">
+                                        <span class="wpcf7-form-control-wrap" data-name="a03_03">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_03" value="似合うと言ってくれた人を信じる" tabindex="" wfd-id="id32">
+                                                        <span class="wpcf7-list-item-label">似合うと言ってくれた人を信じる</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_03" value="ヘアサロンでやり直しさせる" tabindex="" wfd-id="id33">
+                                                        <span class="wpcf7-list-item-label">ヘアサロンでやり直しさせる</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_03" value="自分でなんとかする" tabindex="" wfd-id="id34">
+                                                        <span class="wpcf7-list-item-label">自分でなんとかする</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.03 -->
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_03" value="別のヘアサロンでやり直す" tabindex="" wfd-id="id35">
+                                                        <span class="wpcf7-list-item-label">別のヘアサロンでやり直す</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.04 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step3-02" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step3-04" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step3-04">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q4. 部屋を掃除していたら昔の恋人からもらったアクセサリーが出てきました…どうしますか？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-3-04.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a03_04">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_04" value="身に付ける" tabindex="" wfd-id="id36">
+                                                        <span class="wpcf7-list-item-label">身に付ける</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_04" value="売る" tabindex="" wfd-id="id37">
+                                                        <span class="wpcf7-list-item-label">売る</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_04" value="しまっておく" tabindex="" wfd-id="id38">
+                                                        <span class="wpcf7-list-item-label">しまっておく</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.03 -->
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_04" value="捨てる" tabindex="" wfd-id="id39">
+                                                        <span class="wpcf7-list-item-label">捨てる</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.04 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step3-03" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step3-05" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step3-05">
+                            <div class="question__form-ques">
+                                <div class="question__row w-lg">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q5. 海に浮かぶ無人島で一人きりの生活をすることになりました。一冊だけ本を持って行けるとしたらどんな本を選びますか？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-3-05.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a04_01">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_05" value="ベストセラーのエッセイ" tabindex="" wfd-id="id40">
+                                                        <span class="wpcf7-list-item-label">ベストセラーのエッセイ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_05" value="非日常を描いたファンタジー小説" tabindex="" wfd-id="id41">
+                                                        <span class="wpcf7-list-item-label">非日常を描いたファンタジー小説</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_05" value="島での生活を指南するサバイバルガイド" tabindex="" wfd-id="id42">
+                                                        <span class="wpcf7-list-item-label">島での生活を指南するサバイバルガイド</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.03 -->
+
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a03_05" value="友だちに勧められたマンガ" tabindex="" wfd-id="id43">
+                                                        <span class="wpcf7-list-item-label">友だちに勧められたマンガ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.04 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step3-04" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step4-01" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <!-- STEP4 -->
+                        <div class="question__form-area hide" id="step4-01">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q1. メイクをしなくても顔立ちがハッキリしている？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-4-01.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a04_01">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_01" value="はい" tabindex="" wfd-id="id44">
+                                                        <span class="wpcf7-list-item-label">はい</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_01" value="いいえ" tabindex="" wfd-id="id45">
+                                                        <span class="wpcf7-list-item-label">いいえ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step3-05" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step4-02" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step4-02">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q2. 鼻が高いと言われたことがある？</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-4-02.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a04_02">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_02" value="はい" tabindex="" wfd-id="id46">
+                                                        <span class="wpcf7-list-item-label">はい</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_02" value="いいえ" tabindex="" wfd-id="id47">
+                                                        <span class="wpcf7-list-item-label">いいえ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step4-01" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" data-next="step4-03" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step4-03">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q3. 強調するメイクより、やわらかいメイクの方が似合ってると思う</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-4-03.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a04_03">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_03" value="はい" tabindex="" wfd-id="id48">
+                                                        <span class="wpcf7-list-item-label">はい</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_03" value="いいえ" tabindex="" wfd-id="id49">
+                                                        <span class="wpcf7-list-item-label">いいえ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step4-02" value="戻る">戻る</button>
+                                <button type="submit" disabled class="question__form-btn-next" data-next="step4-04" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+                        <div class="question__form-area hide" id="step4-04">
+                            <div class="question__form-ques">
+                                <div class="question__row">
+                                    <div class="question__row-question">
+                                        <p class="question__row-question">Q4. 鏡の前に立つと頬骨が気になる</p>
+                                        <img src="@@webRoot/images_new/questions/women/question-4-04.png" alt="" width="260" height="195" loading="lazy">
+                                    </div>
+    
+                                    <div class="question__row">
+                                        <span class="wpcf7-form-control-wrap" data-name="a04_04">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_04" value="はい" tabindex="" wfd-id="id50">
+                                                        <span class="wpcf7-list-item-label">はい</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.01 -->
+            
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="a04_04" value="いいえ" tabindex="" wfd-id="id51">
+                                                        <span class="wpcf7-list-item-label">いいえ</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                            <!--/ NO.02 -->
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="question__form-navigation">
+                                <button type="button" class="question__form-btn-prev" data-prev="step4-03" value="戻る">戻る</button>
+                                <button type="button" disabled class="question__form-btn-next" value="次の質問へ">次の質問へ</button>
+                            </div>
+                        </div>
+
+
+                        <div class="question__form-contact hide">
+
+                            <div class="question__form-contact-details">
+                                <!-- form html here -->
+                            </div>
+
+
+                            <div class="question__form-contact-navigation">
+                                <button type="submit" class="question__form-btn-next b-hgt" value="診断完了！">診断完了！</button>
+                                <button type="button" class="question__form-btn-prev -sm" value="戻る">戻る</button>
+                            </div>
+
+                        </div>
+    
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+@@include('@@webRoot/parts/footer.html')

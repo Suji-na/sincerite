@@ -1,0 +1,286 @@
+.data {
+    padding: 80px 0 80px;
+    
+    @include mq("tablet") {
+        padding: 60px 0 60px;
+    }
+
+    .heading-primary {
+        // @include mq("tablet") {
+        //     padding-bottom: 80px;
+        // }
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -7px;
+        position: relative;
+
+        @include mq("tablet") {
+            margin: 0 -9px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: #ddd7cf;
+            top: 0;
+            right: 49.8%;
+            transform: translateX(-50%);
+
+            @include mq("tablet") {
+                right: 50%;
+            }
+        }
+    }
+
+    &__col {
+        width: 50%;
+        padding: 0 7px;
+        margin-bottom: 15px;
+
+        @include mq("tablet") {
+            padding: 0 9px;
+            margin-bottom: 21px;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            margin-bottom: 0;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            .data__col-wpr {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    &__col-wpr {
+        background-color: #f4f2f0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        padding: 22px 5px 20px;
+        height: 100%;
+
+        @include mq("tablet") {
+            justify-content: unset;
+            flex-direction: row;
+            padding: 45px 58px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #ddd7cf;
+            bottom: -9px;
+            left: 0;
+
+            @include mq("tablet") {
+                bottom: -10px;
+            }
+        }
+    }
+
+    &__fig {
+        background-image: url("../../images_new/top/data/data-bg.svg");
+        background-size: cover;
+        width: 85px;
+        height: 85px;
+        border-radius: 85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        @include mq("tablet") {
+            width: 180px;
+            height: 180px;
+            border-radius: 180px;
+            margin-right: 20px;
+        }
+
+       
+
+        &-capt {
+            font-size: 1rem;
+            font-family: $font-secondary;
+            line-height: 1.1;
+            color: #b19d7f;
+            text-align: center;
+            margin-top: 4px;
+
+            @include mq("tablet") {
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+        }
+
+        img {
+            max-height: 32px;
+
+            @include mq("tablet") {
+                max-height: initial;
+            }
+        }
+    }
+
+    &__col-desc {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        font-family: $font-mincho;
+        margin-bottom: 5px;
+
+        @include mq("tablet") {
+            font-size: 2.5rem;
+        }
+
+        &.-sm {
+            display: block;
+
+            @include mq("tablet") {
+                display: none;
+            }
+        }
+
+        &.-md {
+            display: none;
+
+            @include mq("tablet") {
+                display: block;
+            }
+        }
+    }
+
+    &__col-digi {
+        font-size: 1.7rem;
+        line-height: 1.16;
+        font-family: $font-mincho;
+        display: flex;
+        align-items: baseline;
+        margin-top: 10px;
+        color: #ba4f4f;
+        border-bottom: 1px solid #ba4f4f;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #ba4f4f;
+            left: 0;
+            bottom: 3px;
+        }
+
+        @include mq("tablet") {
+            font-size: 3.6rem;
+            margin-top: 0;
+        }
+
+        & .-inline {
+            display: inline-block;
+            margin-top: 0;
+
+            border-bottom: none;
+            &::after{
+                content: none;
+            }
+        }
+
+        &-vtl {
+            font-size: 1.7rem;
+
+            @include mq("tablet") {
+                font-size: 2.6rem;
+                writing-mode: vertical-lr;
+            }
+        }
+    }
+
+    &__col-no {
+        font-size: 2.4rem;
+        line-height: 1;
+        font-weight: 400;
+        font-family: $font-mincho;
+        // font-family: "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+        // border-bottom: 1px solid #ba4f4f;
+        padding-bottom: 5px;
+        display: inline-block;
+        position: relative;
+
+        @include mq("tablet") {
+            font-size: 6.5rem;
+            // padding-right: 11px;
+        }
+
+        // &::after {
+        //     position: absolute;
+        //     content: "";
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: #ba4f4f;
+        //     left: 0;
+        //     bottom: 3px;
+        // }
+
+        &.-sm {
+            font-size: 1.7rem;
+
+            @include mq("tablet") {
+                font-size: 6.5rem;
+            }
+        }
+    }
+
+    &__col-prcnt {
+        font-size: 1.7rem;
+
+        @include mq("tablet") {
+            font-size: 4.2rem;
+        }
+    }
+
+    &__col-req {
+        font-size: 1.5rem;
+        margin-top: 16px;
+        color: #707070;
+        display: none;
+
+        @include mq("tablet") {
+            display: block;
+        }
+    }
+
+    &__txt {
+        font-size: 1.6rem;
+        font-family: $font-mincho;
+        line-height: 1.6;
+        margin: 30px 0 20px;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 2.5rem;
+            margin: 50px 0 50px;
+        }
+    }
+   
+    .btn-primary {
+        margin: 0 auto;
+    }
+}

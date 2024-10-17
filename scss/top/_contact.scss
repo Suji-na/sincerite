@@ -1,0 +1,115 @@
+.contact {
+    background-color: #b19d7f;
+    padding: 40px 0 40px;
+
+    @include mq("tablet") {
+        padding: 80px 0 80px;
+    }
+
+    &__logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 120px;
+
+        @include mq("tablet") {
+            max-width: 150px;
+        }
+    }
+
+    &__box {
+        margin-top: 29px;
+        text-align: center;
+    }
+
+    &__txt {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $color-white;
+        letter-spacing: 0.05em;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 1.83;
+        font-weight: 400;
+        color: $color-white;
+        font-family: $font-mincho;
+        margin: 20px 0;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 1.8rem;
+            margin: 18px 0 9px;
+            line-height: 1.94;
+        }
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        line-height: 2.5;
+        font-weight: 400;
+        color: $color-white;
+        text-align: center;
+        transition: all 0.3s ease;
+
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__btn-box {
+        margin-top: 35px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            margin-top: 50px;
+        }
+    }
+}
+
+.info {
+    background-color: #F9F8F7;
+    padding: 0 0 50px;
+
+    @include mq('tablet') {
+        padding: 0 0 100px;
+    }
+
+    .heading-primary-en {
+        &::before {
+            content: none;
+        }
+    }
+
+    &__btn-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+        }
+
+        .btn-secondary {
+            margin-bottom: 20px;
+
+            @include mq("tablet") {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

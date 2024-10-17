@@ -1,0 +1,163 @@
+.banner {
+    margin-bottom: 80px;
+
+    @include mq("tablet") {
+        margin-bottom: 130px;
+    }
+
+    &__row {
+        display       : flex;
+        flex-direction: column;
+        gap           : 20px;
+
+        @include mq("tablet") {
+            gap           : 0;
+            min-width     : 1280px;
+            flex-direction: row;
+        }
+    }
+
+    &__col {
+        min-height     : 257px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        justify-content: center;
+        position       : relative;
+        isolation      : isolate;
+
+        @include mq("tablet") {
+            flex   : 0 0 50%;
+            padding: 71px 0 60px;
+        }
+
+        &::after {
+            content         : "";
+            position        : absolute;
+            inset           : 0;
+            background-color: $color-black;
+            opacity         : 0.35;
+            z-index         : -1;
+        }
+    }
+
+    &__cnt {
+        height: 100%;
+
+        .btn-primary {
+            margin: 0 auto;
+        }
+    }
+
+    &__btns {
+        .btn-primary {
+            &:not(:last-of-type) {
+                margin-bottom: 12px;
+
+                @include mq("tablet") {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__ttl {
+        color          : $color-white;
+        font-size      : 2rem;
+        font-weight    : 500;
+        letter-spacing : 0.05em;
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        gap            : 7px;
+        font-family: $font-primary;
+        @include mq("tablet") {
+            font-size: 3.2rem;
+            gap      : 22px;
+        }
+
+        &::before {
+            content            : "";
+            display            : block;
+            width              : 20px;
+            height             : 18px;
+            background-image   : url(../../images_new/icons/banner-icon.svg);
+            background-position: center;
+            background-repeat  : no-repeat;
+            background-size    : contain;
+            flex-shrink        : 0;
+
+            @include mq("tablet") {
+                width : 26px;
+                height: 22px;
+            }
+        }
+
+        &+.btn-primary {
+            margin-top: 14px;
+
+            @include mq("tablet") {
+                margin-top: 78px;
+            }
+        }
+
+        &+.banner__btns {
+            margin-top: 14px;
+
+            @include mq("tablet") {
+                margin-top: 34px;
+            }
+        }
+    }
+
+    &.-women {
+        .banner__col {
+            background-size: cover;
+            min-height     : 184px;
+
+            &:nth-of-type(1) {
+                background-image: url("../../images_new/women/women-banner-contact01.jpg");
+            }
+
+            &:nth-of-type(2) {
+                background-image: url("../../images_new/women/women-banner-contact02.jpg");
+            }
+        }
+
+        .banner__ttl+.btn-primary {
+            margin-top: 20px;
+
+            @include mq("tablet") {
+                margin-top: 32px;
+            }
+        }
+    }
+    &.-men {
+        .banner__col {
+            background-size: cover;
+            min-height     : 184px;
+
+            &:nth-of-type(1) {
+                background-image: url("../../images_new/men/men-banner-contact01.jpg");
+            }
+
+            &:nth-of-type(2) {
+                background-image: url("../../images_new/men/men-banner-contact02.jpg");
+            }
+        }
+
+        .banner__ttl+.btn-primary {
+            margin-top: 12px;
+
+            @include mq("tablet") {
+                margin-top: 32px;
+            }
+        }
+    }
+
+
+
+
+}

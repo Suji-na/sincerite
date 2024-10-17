@@ -1,0 +1,157 @@
+.info-job {
+    background-color: $color-white;
+
+    .high-class {
+        padding-bottom: 30px;
+
+        @include mq("tablet") {
+            padding-bottom: 71px;
+        }
+    }
+
+    &__row {
+        display  : flex;
+        flex-wrap: wrap;
+        gap      : 20px 20px;
+        margin   : 60px 0;
+
+        @include mq("tablet") {
+            gap   : 48px 48px;
+            margin: 100px 0;
+        }
+    }
+
+    &__col {
+        flex: 0 0 calc(100% / 2 - 10px);
+
+        @include mq("tablet") {
+            flex: 0 0 calc(100% / 4 - 36px);
+        }
+
+        &:nth-child(11) {
+            & .info-job__link-txt {
+                margin-top: 13px;
+            }
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color          : $color-black;
+        border-radius  : 5px;
+        box-shadow     : 2px 2px 10px rgba(0, 0, 0, 0.06);
+        display        : block;
+        border         : 1px solid #e5e5e5;
+        transition     : all 0.3s ease;
+        overflow       : hidden;
+        height         : 100%;
+
+        img {
+            display   : block;
+            transition: transform 1s ease, -webkit-transform 1s ease;
+        }
+
+        &:hover {
+            // opacity   : 0.7;
+            box-shadow: none;
+
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__link-txt {
+        font-size       : 1.6rem;
+        line-height     : 1.6;
+        padding         : 10px;
+        font-family     : $font-mincho;
+        position        : relative;
+        background-color: $color-white;
+
+        @include mq('tablet') {
+            font-size: 2rem;
+            padding  : 19px 20px;
+        }
+
+        &::after {
+            position           : absolute;
+            content            : "";
+            width              : 17px;
+            height             : 17px;
+            background-image   : url(../../images_new/common/arw-dwn.svg);
+            background-position: center;
+            background-size    : contain;
+            background-repeat  : no-repeat;
+            right              : 10px;
+            top                : 50%;
+            transform          : translateY(-50%) rotate(-90deg);
+
+            @include mq('tablet') {
+                width : 30px;
+                height: 30px;
+                right : 20px;
+            }
+        }
+
+    }
+
+    &__ttl {
+        font-size    : 2rem;
+        font-family  : $font-mincho;
+        text-align   : center;
+        line-height  : 1.6;
+        margin-bottom: 20px;
+
+
+        @include mq('tablet') {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__desc {
+        padding         : 20px;
+        font-size       : 1.4rem;
+        line-height     : 2;
+        letter-spacing  : 0.05em;
+        background-color: #f8f4f0;
+
+        @include mq('tablet') {
+            font-size    : 1.6rem;
+            padding      : 36px 54px 38px;
+            margin-bottom: 80px;
+        }
+    }
+
+    &-h2 {
+        font-size  : 2.4rem;
+        font-family: $font-mincho;
+        font-weight: 700;
+        line-height: calc(32/24);
+        color      : #C1A760;
+        text-align : center;
+
+        @include mq("tablet") {
+            font-size  : 4rem;
+            line-height: calc(48/40);
+        }
+    }
+
+    &__content {
+        &.common-mw {
+            margin-top: 60px;
+
+            @include mq("tablet") {
+                margin-top: 80px;
+            }
+
+            & .info-job__row {
+                margin-top: 40px;
+
+                @include mq("tablet") {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+}

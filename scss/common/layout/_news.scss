@@ -1,0 +1,419 @@
+.news-list {
+    padding-top: 30px;
+
+    @include mq("tablet") {
+        padding-top: 80px;
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        @include mq("tablet") {
+            flex-direction: row;
+            gap: 60px;
+        }
+    }
+
+    &__col-lg {
+        @include mq("tablet") {
+            width: 69.14%;
+        }
+    }
+
+    &__col-sm {
+        @include mq("tablet") {
+            width: 26.17%;
+        }
+    }
+
+    &__list {
+        padding: 30px 0;
+        border-top: 1px solid #ddd7cf;
+
+        &:first-child {
+            border-top: none;
+            @include mq("tablet") {
+                border-top: 1px solid #ddd7cf;
+            }
+        }
+
+        @include mq("tablet") {
+            padding: 30px 40px;
+        }
+
+        &.-last {
+            border-bottom: 1px solid #ddd7cf;
+        }
+    }
+
+    &__cat-box {
+        display: flex;
+        align-items: center;
+    }
+
+    &__cat {
+        font-size: 1rem;
+        line-height: 1.8;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        padding: 4px 11px;
+        color: #b19d7f;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 1px solid #b19d7f;
+        transition: all 0.3s ease;
+        margin-right: 8px;
+        min-width: 86px;
+        text-align: center;
+
+        @include mq("tablet") {
+            font-size: 1.2rem;
+            min-width: 110px;
+            margin-right: 12px;
+        }
+        &:hover {
+            background-color: #b19d7f;
+            color: $color-white;
+        }
+
+        &.-red {
+            background-color: #ba4f4f;
+            border: 1px solid #ba4f4f;
+            color: $color-white;
+            &:hover {
+                background-color: transparent;
+                color: #ba4f4f;
+            }
+        }
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        color: #707070;
+
+        @include mq("tablet") {
+            font-size: 1.2rem;
+        }
+    }
+    &__link {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        margin-top: 7px;
+        display: inline-block;
+        color: $color-black;
+        transition: all 0.3s ease;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        @include mq("tablet") {
+            font-size: 1.8rem;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &__category {
+        margin-bottom: 15px;
+    }
+    &__cat-ttl {
+        font-size: 3rem;
+        font-family: $font-secondary;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ddd7cf;
+        padding: 4px 29px;
+        span {
+            font-size: 1.4rem;
+            line-height: 1.64;
+            letter-spacing: 0.05em;
+            font-family: $font-primary;
+            margin-left: 6px;
+        }
+    }
+
+    &__link-box {
+        padding: 24px 15px;
+    }
+
+    &__cat-link {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        color: #939393;
+        width: 100%;
+        padding-left: 23px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 16px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            opacity: 0.7;
+            text-decoration: none;
+
+            span {
+                &::after {
+                    content: none;
+                }
+            }
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 19px;
+            background-image: url(./../../images_new/common/icon-flower.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 0;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 11px;
+            height: 4px;
+            background-image: url(./../../images_new/common/arw.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        span {
+            font-size: 1.4rem;
+            letter-spacing: 0.05em;
+            color: $color-black;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #333;
+                left: 0;
+                bottom: 0;
+            }
+        }
+
+        &.-active {
+            span {
+                font-weight: 600;
+                color: $color-primary !important;
+                &::after {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    &__page-link {
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        display: block;
+        img {
+            width: 100%;
+        }
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.news-detail {
+    .news-list__date {
+        font-size: 1.4rem;
+        @include mq("tablet") {
+            font-size: 1.6rem;
+        }
+    }
+
+    .news-list__col-sm {
+        display: none;
+        @include mq("tablet") {
+            display: block;
+        }
+    }
+
+    &__ttl {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin-top: 6px;
+        padding-bottom: 15px;
+        @include mq("tablet") {
+            font-size: 3rem;
+            margin-top: 12px;
+        }
+    }
+
+    // &__desc {
+    //     font-size: 1.6rem;
+    //     line-height: 2;
+    //     letter-spacing: 0.05em;
+    //     margin: 30px 0 10px;
+    // }
+
+    &__req {
+        font-size: 1rem !important;
+        line-height: 1.67;
+        margin-bottom: 60px;
+        @include mq("tablet") {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    &__content {
+        border-top: 1px solid #ddd7cf;
+        border-bottom: 1px solid #ddd7cf;
+        padding: 20px 0 20px;
+        @include mq("tablet") {
+            padding: 30px 0 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 1.5;
+            font-family: $font-mincho;
+            font-weight: 700;
+            padding: 16px 20px;
+            background-color: #f8f4f0;
+            margin-bottom: 30px;
+            margin: 0 -20px 30px;
+
+            @include mq("tablet") {
+                font-size: 2.4rem;
+                line-height: 1.1;
+                padding: 12px;
+                margin: 0 0 40px 0;
+            }
+        }
+        h3 {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            font-weight: 700;
+            color: #b19d7f;
+            margin-bottom: 20px;
+
+            @include mq("tablet") {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+        }
+
+        p {
+            font-size: 1.4rem;
+            line-height: 2;
+            letter-spacing: 0.05em;
+            margin-bottom: 30px;
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+                margin-bottom: 40px;
+            }
+
+            &:first-child {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        gap: 6px;
+        margin-top: 50px;
+
+        @include mq("tablet") {
+            margin-top: 60px;
+        }
+    }
+
+    &__arws {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 0;
+    }
+
+    &__arw {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: 0.05em;
+        color: $color-black;
+        transition: all 0.3s ease;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 28px;
+            height: 28px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include mq("tablet") {
+                font-size: 1.6rem;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        &:hover {
+            text-decoration: none;
+            opacity: 0.7;
+        }
+
+        &.-prev {
+            margin-left: 36px;
+
+            @include mq("tablet") {
+                margin-left: 50px;
+            }
+
+            &::before {
+                background-image: url(./../../images_new/icons/arw-prev.svg);
+                left: -36px;
+                @include mq("tablet") {
+                    left: -50px;
+                }
+            }
+        }
+
+        &.-next {
+            margin-right: 36px;
+
+            @include mq("tablet") {
+                margin-right: 50px;
+            }
+
+            &::before {
+                background-image: url(./../../images_new/icons/arw-next.svg);
+                right: -36px;
+                @include mq("tablet") {
+                    right: -50px;
+                }
+            }
+        }
+    }
+
+    .btn__home {
+        margin: 50px auto 80px;
+        @include mq("tablet") {
+            margin: 80px auto;
+        }
+    }
+}

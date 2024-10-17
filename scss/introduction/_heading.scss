@@ -1,0 +1,38 @@
+.intro {
+    &-heading {
+        background-color: #fafafa;
+        padding         : 30px 0 33px;
+
+        @include mq("tablet") {
+            padding   : 78px 0 80px;
+            
+        }
+
+
+        .heading-secondary {
+            font-size     : 4.2rem;
+            letter-spacing: 0.02em;
+            font-family   : $font-secondary;
+            color         : $color-org;
+            text-align    : center;
+
+            @include mq("tablet") {
+                font-size: 6.4rem;
+            }
+
+            &-sm {
+                display       : block;
+                font-size     : 1.4rem;
+                letter-spacing: 0.05em;
+                line-height   : 1.2;
+                color         : $color-black;
+                font-family   : $font-primary;
+
+                @include mq("tablet") {
+                    font-size: 1.8rem;
+                }
+            }
+
+        }
+    }
+}

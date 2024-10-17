@@ -1,0 +1,35 @@
+// Dependencies CSS
+@import "../../node_modules/swiper/swiper-bundle";
+@import "../../node_modules/slick-carousel/slick/slick";
+
+// CSS
+@import "./vendors/reset";
+@import "./abstracts/variables";
+@import "./abstracts/font-face";
+@import "./abstracts/mixins";
+@import "./base/global";
+@import "./base/typography";
+@import "./components/btns";
+@import './components/section-nav';
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/hero";
+@import "./layout/footer";
+@import './layout/advice';
+@import './layout/steps';
+@import './layout/banner';
+@import './layout/vid';
+@import './layout/flow';
+@import './layout/modal';
+@import './layout/premium';
+@import './layout/news';
+@import './layout/faq';
+@import './layout/access';
+@import './layout/interview';
+@import './layout/recruit';
+@import './layout/company';
+@import './layout/form-steps';
+@import './layout/title';
+@import './layout/question-form';
+@import './layout/partnertest';
+@import './layout/partnertest-complete';

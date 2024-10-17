@@ -1,0 +1,5 @@
+<svg id="Group_7132" data-name="Group 7132" xmlns="http://www.w3.org/2000/svg" width="60" height="50" viewBox="0 0 60 50">
+  <path id="Path_863" data-name="Path 863" d="M2,0H58c1.1,0,2,1.343,2,3V47c0,1.657-.9,3-2,3H2c-1.1,0-2-1.343-2-3V3C0,1.343.9,0,2,0Z" fill="#333"/>
+  <path id="Icon_ionic-md-search" data-name="Icon ionic-md-search" d="M18.745,17.071h-.912l-.342-.286a7.564,7.564,0,0,0,1.767-4.857,7.379,7.379,0,1,0-7.351,7.429,7.637,7.637,0,0,0,4.843-1.771l.342.286v.914l5.7,5.714L24.5,22.786Zm-6.838,0a5.143,5.143,0,1,1,5.128-5.143A5.114,5.114,0,0,1,11.908,17.071Z" transform="translate(15.5 3.5)" fill="#fff"/>
+  <text id="住所検索" transform="translate(30 40)" fill="#fff" font-size="10" font-family="NotoSansJP-Regular, Noto Sans JP"><tspan x="-20" y="0">住所検索</tspan></text>
+</svg>
